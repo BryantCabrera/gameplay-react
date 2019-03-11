@@ -9,9 +9,9 @@ class Login extends Component {
         error: ''
     }
 
-    componentDidMount = () => {
-        console.log(this.props, ' Login props');
-    }
+    // componentDidMount = () => {
+    //     console.log(this.props, ' Login props');
+    // }
 
     openModal = (e) => {
 

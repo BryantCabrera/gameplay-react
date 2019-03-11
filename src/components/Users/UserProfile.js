@@ -3,10 +3,12 @@ import { withRouter } from 'react-router-dom';
 import '../../App.css';
 
 class UserProfile extends Component {
+    
     render() {
+        console.log(this.props.selectedUser, " this is selected user");
         return (
             <div className="user-profile">
-                This is Login.
+                {this.props.selectedUser.name}
             </div>
         )
     }

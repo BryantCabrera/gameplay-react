@@ -27,7 +27,7 @@ class UserCard extends Component {
 
     render() {
         return (
-            <article className={this.state.cardClass}>
+            <article className={this.state.cardClass} key={this.props.user._id}>
                 <h2>
                     <span>{this.props.user.username}</span>
                     <strong>
@@ -50,7 +50,7 @@ class UserCard extends Component {
                     <h4>
                         Be Social
                     </h4>
-                    <Link to="#" onClick={() => console.log('Adding Friend...')}><FontAwesomeIcon icon={faUserPlus} /></Link>
+                    <Link to={`/users/${this.props.user._id}`} onClick={() => this.props.selectUser(this.props.user)}><FontAwesomeIcon icon={faUserPlus} /></Link>
                 </div>
             </article>
         )

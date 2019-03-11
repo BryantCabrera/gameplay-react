@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
@@ -19,7 +19,8 @@ class App extends Component {
     loginDisplay: 'none',
     loggedUser: {},
     loginError: '',
-    users: []
+    users: [],
+    selectedUser: {}
   }
 
   toggleRegister = () => {
@@ -56,10 +57,11 @@ class App extends Component {
       if (parsedResponse.data === 'login successful') {
         //Resets this component's state if a use was successfully logged in
         this.setState({
-          loggedUser: user
+          loggedUser: parsedResponse.user,
+          selectedUser: parsedResponse.user
         });
 
-        this.props.history.push(`/users/${parsedResponse.createdUser._id}`);
+        this.props.history.push(`/users/${parsedResponse.user._id}`);
       } else {
         this.setState({
           loginError: parsedResponse.data
@@ -91,8 +93,14 @@ class App extends Component {
       });
 
     } catch (err) {
-      console.log(err, ' This is error from AllProfiles.js');
+      console.log(err, ' This is error from getUsers in App.js');
     }
+  }
+
+  selectUser = (user) => {
+    this.props.setState({
+      selectedUser: user
+    });
   }
 
   render () {
@@ -105,10 +113,10 @@ class App extends Component {
         <Switch>
           {/* <Route exact path="/register" component={() =>  <Register history={this.props.history} /> } /> */}
           {/* <Route exact path="/login" component={() =>  <Login history={this.props.history} toggleLogin={this.toggleLogin} loginDisplay={this.state.loginDisplay} /> } /> */}
-          <Route exact path="/" component={() => <Main history={this.props.history} />} />
-          <Route exact path="/games" component={() => <Games history={this.props.history} />} />
-          <Route exact path="/users" component={() => <Users history={this.props.history}  users={this.state.users} /> } />
-          <Route exact path="/users/id" component={() => <UserProfile history={this.props.history} />} />
+          <Route exact path="/" component={() => <Main history={this.props.history} /> } />
+          <Route exact path="/games" component={() => <Games history={this.props.history} /> } />
+          <Route exact path="/users" component={() => <Users history={this.props.history} users={this.state.users} selectUser={this.selectUser} /> } />
+          <Route exact path="/users/:id" component={() => <UserProfile history={this.props.history} selectedUser={this.state.selectedUser} /> } />
         </Switch>
         <Chat />
         <Footer />
