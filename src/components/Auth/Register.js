@@ -49,7 +49,7 @@ class Register extends Component {
 
         if (password === verify_password) {
             try {
-                const loginResponse = await fetch('http://localhost:3000/users', {
+                const loginResponse = await fetch(`${process.env.REACT_APP_API_URL}/users`, {
                     method: 'POST',
                     credentials: 'include',
                     body: JSON.stringify(newUser),
