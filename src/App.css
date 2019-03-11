@@ -400,3 +400,31 @@ a:active {
     width: 3em;
   }
 }
+
+/******************************/
+/********** Header **********/
+/******************************/
+.header {
+    position: relative;
+    height: 5rem;
+    width: 100%;
+    background-color: transparent;
+}
+
+.header__logo--link {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header__logo {
+  height: 5rem;
+  width: auto;
+}
+
+.header__bryant {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 5rem;
+}
