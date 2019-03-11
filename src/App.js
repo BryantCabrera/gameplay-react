@@ -18,7 +18,8 @@ class App extends Component {
     registerDisplay: 'none',
     loginDisplay: 'none',
     loggedUser: {},
-    loginError: ''
+    loginError: '',
+    users: []
   }
 
   toggleRegister = () => {
@@ -67,6 +68,30 @@ class App extends Component {
 
     } catch (err) {
       console.log(err);
+    }
+  }
+
+  getUsers = () => {
+    try {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/users`, {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (!response.ok) {
+        throw Error()
+      }
+
+      const parsedResponse = await response.json();
+      this.setState({
+        users: parsedResponse.users
+      });
+
+    } catch (err) {
+      console.log(err, ' This is error from AllProfiles.js');
     }
   }
 
