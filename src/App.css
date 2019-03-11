@@ -423,8 +423,16 @@ a:active {
 }
 
 .header__bryant {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 5rem;
+}
+
+/******************************/
+/********** Main **********/
+/******************************/
+.hero__img {
+  height: 20vw;
+  width: auto;
 }
