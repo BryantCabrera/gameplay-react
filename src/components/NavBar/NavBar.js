@@ -53,13 +53,13 @@ class NavBar extends Component {
                     <ul className="nav__navbar__links">
                         <li><NavLink exact to="/"><FontAwesomeIcon icon={faHome} /></NavLink></li>
 
-                        <li><NavLink exact to="/users"><FontAwesomeIcon icon={faUsers} /></NavLink></li>
+                        <li><NavLink exact to="/users" onClick={this.props.getUsers}><FontAwesomeIcon icon={faUsers} /></NavLink></li>
 
                         <li><NavLink exact to="/games"><FontAwesomeIcon icon={faGamepad} /></NavLink></li>
 
-                        {this.props.loggedUser ? <li><NavLink exact to="/users/:id"><FontAwesomeIcon icon={faUser} /><br>Me</br></NavLink></li> : <li><NavLink exact to="#" onClick={this.props.toggleRegister}><FontAwesomeIcon icon={faRegistered} /></NavLink></li>}
+                        {this.props.loggedUser.id ? <li><NavLink exact to="/users/:id"><FontAwesomeIcon icon={faUser} />Me</NavLink></li> : <li><NavLink exact to="#" onClick={this.props.toggleRegister}><FontAwesomeIcon icon={faRegistered} /></NavLink></li>}
 
-                        {this.props.loggedUser ? <li><NavLink exact to="/"><FontAwesomeIcon icon={faSignOutAlt} /></NavLink></li> : <li><NavLink exact to="#" onClick={this.props.toggleLogin}><FontAwesomeIcon icon={faSignInAlt} /></NavLink></li>}
+                        {this.props.loggedUser.id ? <li><NavLink exact to="/"><FontAwesomeIcon icon={faSignOutAlt} /></NavLink></li> : <li><NavLink exact to="#" onClick={this.props.toggleLogin}><FontAwesomeIcon icon={faSignInAlt} /></NavLink></li>}
                     </ul>
                     <div id="nav__overlay" className={`nav__overlay${this.state.overlayClass}`}></div>
                 </nav>

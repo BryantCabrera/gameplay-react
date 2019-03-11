@@ -9,13 +9,12 @@ class Users extends Component {
     }
 
     componentDidMount () {
-        this.props.getUsers();
     }
 
     render () {
         return (
             <ul className="users">
-                {this.props.Users.map(user => {
+                {this.props.users.map(user => {
                     return (
                         <li className="users__list-item" key={user.id}>
                             <UserCard user={user} />

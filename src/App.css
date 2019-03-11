@@ -577,21 +577,21 @@ form {
 /********** Users **********/
 /******************************/
 .users {
-    display: flex;
-    flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .users__list-item {
-    height: 40rem;
-    width: 40rem;
-    margin: 1rem;
-    margin-bottom: 5rem;
-    list-style: none;
+  height: 40rem;
+  width: 40rem;
+  margin: 1rem;
+  margin-bottom: 5rem;
+  list-style: none;
 }
 
 .mc__img {
-    width: 100%;
-    object-fit: fill;
+  width: 100%;
+  object-fit: fill;
 }
 
 /***** User Card *****/

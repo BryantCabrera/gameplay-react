@@ -99,15 +99,15 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Main />
         <Register history={this.props.history} registerDisplay={this.state.registerDisplay} toggleRegister={this.toggleRegister} loginUser={this.loginUser} />
         <Login history={this.props.history} loginDisplay={this.state.loginDisplay} toggleLogin={this.toggleLogin} loginUser={this.loginUser} />
-        <NavBar toggleRegister={this.toggleRegister} toggleLogin={this.toggleLogin} loggedUser={this.state.loggedUser} />
+        <NavBar toggleRegister={this.toggleRegister} toggleLogin={this.toggleLogin} loggedUser={this.state.loggedUser} getUsers={this.getUsers} />
         <Switch>
           {/* <Route exact path="/register" component={() =>  <Register history={this.props.history} /> } /> */}
           {/* <Route exact path="/login" component={() =>  <Login history={this.props.history} toggleLogin={this.toggleLogin} loginDisplay={this.state.loginDisplay} /> } /> */}
+          <Route exact path="/" component={() => <Main history={this.props.history} />} />
           <Route exact path="/games" component={() => <Games history={this.props.history} />} />
-          <Route exact path="/users" component={() => <Users history={this.props.history} getUsers={this.state.getUsers} users={this.state.users} /> } />
+          <Route exact path="/users" component={() => <Users history={this.props.history}  users={this.state.users} /> } />
           <Route exact path="/users/id" component={() => <UserProfile history={this.props.history} />} />
         </Switch>
         <Chat />
