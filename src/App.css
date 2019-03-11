@@ -1,3 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Prompt:400,500i,700,900');
+
+:root {
+  --color-primary: rgba(33, 83, 141, 1); /* #21538D */
+  --color-primary-light: rgba(48, 121, 205, 1); /* #3079CD */
+  --color-primary-dark: rgba(18, 83, 78, 1); /* #122E4E */
+  --color-primary-dark: rgba(18, 46, 78, 1); /* #122E4E */
+  --color-primary-darker: rgba(15, 38, 65, 1); /* #0F2641 */
+  --color-primary-darkest: rgba(12, 30, 51, 1); /* #0C1E33 */
+
+  --color-secondary: #55c57a;
+  --color-secondary-light: #7ed56f;
+  --color-secondary-dark: #28b485;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+html {
+  font-family: 'Prompt', sans-serif;
+  font-size: 62.5%;
+  width: 100vw;
+}
+
+body {
+  width: 100%;
+}
+
 .App {
   text-align: center;
 }
@@ -31,3 +65,96 @@
     transform: rotate(360deg);
   }
 }
+
+
+/******************************/
+/********** Reusable **********/
+/******************************/
+/***** Links *****/
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover,
+a:active {
+  color: var(--color-primary);
+}
+
+/***** Buttons *****/
+.btn,
+.btn:link,
+.btn:visited {
+  position: relative;
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  -o-border-radius: 10rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+
+  /* Changes for the button element */
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-.3rem);
+  -webkit-transform: translateY(-.3rem);
+  -moz-transform: translateY(-.3rem);
+  -ms-transform: translateY(-.3rem);
+  -o-transform: translateY(-.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+
+/* .btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+  -moz-transform: scaleX(1.4) scaleY(1.6);
+  -ms-transform: scaleX(1.4) scaleY(1.6);
+  -o-transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+} */
+
+.btn:active,
+.btn:focus {
+  /* this -1px is in relation to :link, not :hover */
+  transform: translateY(-.1rem);
+  -moz-transform: translateY(-.1rem);
+  -ms-transform: translateY(-.1rem);
+  -o-transform: translateY(-.1rem);
+  -webkit-transform: translateY(-.1rem);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+  outline: none;
+}
+
+/* .btn::after {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  -o-border-radius: 10rem;
+  position: absolute;
+  transition: all .4s;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -ms-transition: all .4s;
+  -o-transition: all .4s;
+} */
