@@ -99,7 +99,7 @@ class App extends Component {
         });
 
         this.props.history.push(`/`);
-        
+
       } else {
         this.setState({
           loginError: parsedResponse.data
@@ -146,7 +146,7 @@ class App extends Component {
         <Header />
         <Register history={this.props.history} registerDisplay={this.state.registerDisplay} toggleRegister={this.toggleRegister} loginUser={this.loginUser} />
         <Login history={this.props.history} loginDisplay={this.state.loginDisplay} toggleLogin={this.toggleLogin} loginUser={this.loginUser} />
-        <NavBar toggleRegister={this.toggleRegister} toggleLogin={this.toggleLogin} loggedUser={this.state.loggedUser} getUsers={this.getUsers} />
+        <NavBar toggleRegister={this.toggleRegister} toggleLogin={this.toggleLogin} loggedUser={this.state.loggedUser} getUsers={this.getUsers} logoutUser={this.logoutUser} />
         <Switch>
           {/* <Route exact path="/register" component={() =>  <Register history={this.props.history} /> } /> */}
           {/* <Route exact path="/login" component={() =>  <Login history={this.props.history} toggleLogin={this.toggleLogin} loginDisplay={this.state.loginDisplay} /> } /> */}
