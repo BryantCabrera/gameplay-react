@@ -3,19 +3,28 @@ import { withRouter } from 'react-router-dom';
 import UserCard from './UserCard';
 import '../../App.css';
 
-class UserCard extends Component {
+class Users extends Component {
+    state = {
+        users: []
+    }
 
-    return (
-        <ul className="users">
-            {data.getUsers.map(user => {
-                return (
-                    <li className="users__list-item" key={user.id}>
-                        <UserCard user={user} />
-                    </li>
-                )
-            })}
-        </ul>
-    )
+    componentDidMount () {
+        this.props.getUsers();
+    }
+
+    render () {
+        return (
+            <ul className="users">
+                {this.props.Users.map(user => {
+                    return (
+                        <li className="users__list-item" key={user.id}>
+                            <UserCard user={user} />
+                        </li>
+                    )
+                })}
+            </ul>
+        )
+    }   
 }
 
 

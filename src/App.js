@@ -107,7 +107,7 @@ class App extends Component {
           {/* <Route exact path="/register" component={() =>  <Register history={this.props.history} /> } /> */}
           {/* <Route exact path="/login" component={() =>  <Login history={this.props.history} toggleLogin={this.toggleLogin} loginDisplay={this.state.loginDisplay} /> } /> */}
           <Route exact path="/games" component={() => <Games history={this.props.history} />} />
-          <Route exact path="/users" component={() => <Users history={this.props.history} users={this.state.users} />} />
+          <Route exact path="/users" component={() => <Users history={this.props.history} getUsers={this.state.getUsers} users={this.state.users} /> } />
           <Route exact path="/users/id" component={() => <UserProfile history={this.props.history} />} />
         </Switch>
         <Chat />
