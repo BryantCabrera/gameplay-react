@@ -35,7 +35,7 @@ class Register extends Component {
         }
     }
 
-    handleSubmit = await (e) => {
+    handleSubmit = async (e) => {
         e.preventDefault();
 
         const { username, email, password, verify_password, img } = this.state;
