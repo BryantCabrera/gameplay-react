@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import '../../App.css';
 
 class Register extends Component {
     state = {
@@ -48,7 +49,7 @@ class Register extends Component {
 
         if (password === verify_password) {
             try {
-                const loginResponse = await fetch('/users', {
+                const loginResponse = await fetch('http://localhost:3000/users', {
                     method: 'POST',
                     credentials: 'include',
                     body: JSON.stringify(newUser),

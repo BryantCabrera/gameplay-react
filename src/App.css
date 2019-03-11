@@ -436,3 +436,115 @@ a:active {
   height: 20vw;
   width: auto;
 }
+
+/******************************/
+/********** Auth **********/
+/******************************/
+/***** Forms *****/
+form {
+    position: relative;
+    padding-top: 1rem;
+}
+
+.register {
+    height: 45rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    border-radius: .4rem;
+    background-color: var(--color-primary-light);
+}
+
+.login {
+    height: 25rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    border-radius: .4rem;
+    background-color: var(--color-primary-light);
+}
+
+.form__field:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+/* input */
+.form__field--input {
+    display: block;
+    width: 90%;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 1.5rem;
+    font-family: inherit;
+    background-color: rgba(255, 255, 255, .5);
+    color: inherit;
+    transition: all .3s;
+}
+
+.form__field--input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+    border-bottom: 3px solid $color-primary;
+}
+
+.form__field--input:focus:invalid {
+    border-bottom: 3px solid var(--color-secondary-dark);
+}
+
+.form__field--input::-webkit-input-placeholder {
+    color: #555;
+}
+
+/* label */
+.form__field--label {
+    display: block;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: left;
+    transition: all .3s;
+}
+
+.form__field--input:placeholder-shown + .form__field--label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+}
+
+/***** Close Button *****/
+.close-modal {
+    position: absolute;
+    top: -1.5rem;
+    right: -1.5rem;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    cursor: pointer;
+}
+
+.close-modal:focus {
+    outline: none;
+}
+
+/***** Overlay *****/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .7);
+}
