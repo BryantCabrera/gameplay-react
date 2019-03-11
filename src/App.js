@@ -20,7 +20,8 @@ class App extends Component {
     loggedUser: {},
     loginError: '',
     users: [],
-    selectedUser: {}
+    selectedUser: {},
+    logoutMessage: ''
   }
 
   toggleRegister = () => {
@@ -68,6 +69,42 @@ class App extends Component {
         });
       }
 
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  logoutUser = () => {
+    try {
+      const logoutResponse = await fetch(`${process.env.REACT_APP_API_URL}/auth/logout`, {
+        method: 'POST',
+        credentials: 'include',
+        body: JSON.stringify(user),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (!logoutResponse.message) {
+        throw Error(logoutResponse.error)
+      }
+
+      const parsedResponse = await logoutResponse.json();
+
+      if (parsedResponse.data === 'User successfully logged out.') {
+        //Resets this component's state if a use was successfully logged in
+        this.setState({
+          loggedUser: {},
+          selectedUser: {},
+          logoutMessage: parsedResponse.data
+        });
+
+        this.props.history.push(`/`);
+      } else {
+        this.setState({
+          loginError: parsedResponse.data
+        });
+      }
     } catch (err) {
       console.log(err);
     }
