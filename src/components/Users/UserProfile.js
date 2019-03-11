@@ -37,6 +37,7 @@ class UserProfile extends Component {
             <div className="user-profile">
             <h1>hello this is user page</h1>
                 {this.state.user.username}
+                {this.props.loggedUser._id === this.state.user._id ? 'You' : 'Not You'}
             </div>
         )
     }
