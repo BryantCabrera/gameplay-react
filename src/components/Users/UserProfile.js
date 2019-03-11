@@ -3,12 +3,40 @@ import { withRouter } from 'react-router-dom';
 import '../../App.css';
 
 class UserProfile extends Component {
+    state = {
+        user: {}
+    }
+
+    componentDidMount = async () => {
+        console.log(this.props.match.params.id);
+        try {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/users/${this.props.match.params.id}`, {
+                method: 'GET',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (!response.ok) {
+                throw Error()
+            }
+
+            const parsedResponse = await response.json();
+            this.setState({
+                user: parsedResponse.data
+            });
+
+        } catch (err) {
+            console.log(err, ' This is error from UserProfile.js');
+        }
+    }
     
     render() {
-        console.log(this.props.selectedUser, " this is selected user");
         return (
             <div className="user-profile">
-                {this.props.selectedUser.name}
+            <h1>hello this is user page</h1>
+                {this.state.user.username}
             </div>
         )
     }

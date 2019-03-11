@@ -74,12 +74,11 @@ class App extends Component {
     }
   }
 
-  logoutUser = () => {
+  logoutUser = async () => {
     try {
       const logoutResponse = await fetch(`${process.env.REACT_APP_API_URL}/auth/logout`, {
         method: 'POST',
         credentials: 'include',
-        body: JSON.stringify(user),
         headers: {
           'Content-Type': 'application/json'
         }
@@ -153,7 +152,7 @@ class App extends Component {
           <Route exact path="/" component={() => <Main history={this.props.history} /> } />
           <Route exact path="/games" component={() => <Games history={this.props.history} /> } />
           <Route exact path="/users" component={() => <Users history={this.props.history} users={this.state.users} selectUser={this.selectUser} /> } />
-          <Route exact path="/users/:id" component={() => <UserProfile history={this.props.history} selectedUser={this.state.selectedUser} /> } />
+          <Route exact path="/users/:id" component={() => <UserProfile history={this.props.history} /> } />
         </Switch>
         <Chat />
         <Footer />
