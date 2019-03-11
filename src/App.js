@@ -36,7 +36,7 @@ class App extends Component {
     });
   }
 
-  loginUser = (user) => {
+  loginUser = async (user) => {
     try {
       const loginResponse = await fetch('http://localhost:3000/auth/login', {
         method: 'POST',
@@ -71,7 +71,7 @@ class App extends Component {
     }
   }
 
-  getUsers = () => {
+  getUsers = async () => {
     try {
       const response = await fetch(`${process.env.REACT_APP_API_URL}/users`, {
         method: 'GET',
@@ -95,7 +95,7 @@ class App extends Component {
     }
   }
 
-  render() {
+  render () {
     return (
       <div className="App">
         <Header />
