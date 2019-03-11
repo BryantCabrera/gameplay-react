@@ -927,3 +927,26 @@ form {
 .material-card.Teal.mc-active .mc-btn-action {
   border-color: #E0F2F1;
 }
+
+/******************************/
+/********** Footer **********/
+/******************************/
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: transparent;
+}
+
+.footer__links {
+  margin-right: .5rem;
+}
+
+.footer__links li {
+  list-style: none;
+}
