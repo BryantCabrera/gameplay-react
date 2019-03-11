@@ -158,3 +158,245 @@ a:active {
   -ms-transition: all .4s;
   -o-transition: all .4s;
 } */
+
+/******************************/
+/********** Navigation **********/
+/******************************/
+
+/***** Navigation Wheel *****/
+.nav__navbar {
+    position: fixed;
+    left: 50%;
+    bottom: -13em;
+    width: 26em;
+    height: 26em;
+    margin-left: -13em;
+    overflow: hidden;
+    font-size:1em;
+    border-radius: 50%;
+    transform: scale(0.1);
+    transition: all .3s ease;
+    z-index: 10;
+}
+
+/* this is the class applied to the component that will scale the navigation up */
+.opened-nav {
+    border-radius: 50%;
+    transform: scale(1);
+}
+
+.nav__button {
+    position: fixed;
+    left: 50%;
+    bottom: -1.75em;
+    height: 3.5em;
+    width: 3.5em;
+    margin-left: -1.75em;
+    padding-bottom: 1em;
+    border: none;
+    background: none;
+    border-radius: 50%;
+    text-align: Center;
+    font-size: 2.4em;
+    background-color: #111;
+    color: white;
+    cursor: pointer;
+    z-index: 11
+}
+
+.nav__button:hover,
+.nav__button:active,
+.nav__button:focus {
+    background-color: #222;
+    outline: none;
+}
+
+/***** Overlay *****/
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all .3s ease;
+    z-index: 2;
+    pointer-events: none;
+}
+  
+/* This is the class added to the overlay in component that shows it when the navigation is open */
+.nav__overlay.on-overlay{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/***** List Items *****/
+.nav__navbar li {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10em;
+    height: 10em;
+    margin-top: -1.3em;
+    margin-left: -10em;
+    transform-origin: 100% 100%;
+    overflow: hidden;
+    font-size: 1.5em;
+    transition: border .3s ease;
+    z-index: 3;
+}
+  
+.nav__navbar li a {
+    position: absolute;
+    right: -7.25em;
+    bottom: -7.25em;
+    display: block;
+    height: 14.5em;
+    width: 14.5em;
+    padding-top: 1.8em;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.18em;
+    color: #fff;
+    transform: skew(-50deg) rotate(-70deg) scale(1);
+    transition: opacity 0.3s, color 0.3s;
+}
+  
+.nav__navbar li a span {
+    font-size: 1.1em;
+    opacity: 0.7;
+}
+  /* for a central angle x, the list items must be skewed by 90-x degrees
+  in our case x=40deg so skew angle is 50deg
+  items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
+  
+.nav__navbar li:first-child {
+    transform: rotate(-10deg) skew(50deg);
+}
+  
+.nav__navbar li:nth-child(2) {
+    transform: rotate(30deg) skew(50deg);
+}
+  
+.nav__navbar li:nth-child(3) {
+    transform: rotate(70deg) skew(50deg)
+}
+  
+.nav__navbar li:nth-child(4) {
+    transform: rotate(110deg) skew(50deg);
+}
+  
+.nav__navbar li:nth-child(5) {
+    transform: rotate(150deg) skew(50deg);
+}
+  
+.nav__navbar li:nth-child(odd) a {
+    background-color: var(--color-primary-dark); /*#a11313*/
+    background-color: var(--color-primary-dark); /*hsla(0, 88%, 63%, 1)*/
+}
+  
+.nav__navbar li:nth-child(even) a {
+    background-color: var(--color-primary-darkest); /*#a61414*/
+    background-color: var(--color-primary-darkest); /*hsla(0, 88%, 65%, 1)*/
+}
+  
+/* active style */
+.nav__navbar li.active a {
+    background-color: var(--color-primary-light); /*#b31515*/
+    background-color: var(--color-primary-light); /*hsla(0, 88%, 70%, 1)*/
+}
+  
+/* hover style */
+.nav__navbar li:not(.active) a:hover,
+.nav__navbar li:not(.active) a:active,
+.nav__navbar li:not(.active) a:focus {
+    background-color: var(--color-primary-light); /*#b31515*/
+    background-color: var(--color-primary-light); /* hsla(0, 88%, 70%, 1) #6F325C*/
+    
+}
+.nav__navbar li:not(.active) a:focus {
+    /* fixes the "displacement" bug in webkit browsers when using tab key */
+    position: fixed; 
+}
+
+/***** Browser Support for No CSS Transforms *****/
+.no-csstransforms .nav__navbar{
+    height: 5em;
+    width: 25.15em;
+    left: 50%;
+    bottom: 0;
+    margin-left: -12.5em;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    overflow: hidden;
+    position: fixed;
+    z-index: 10;
+}
+  
+.no-csstransforms .nav__button{
+    display: none;
+}
+  
+.no-csstransforms .nav__navbar li{
+    position: static;
+    height: 5em;
+    width: 5em;
+    float: left;
+    background-color: #eee;
+    text-align: center;
+    line-height: 5em;
+    font-size: 1em;
+}
+  
+.no-csstransforms .nav__navbar li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #ddd;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: inherit;
+}
+  
+.no-csstransforms .nav__navbar li a:last-child{
+    border: none;
+}
+  
+.no-csstransforms .nav__navbar li a:hover,
+.no-csstransforms .nav__navbar li a:active,
+.no-csstransforms .nav__navbar li a:focus{
+    background-color: white;
+}
+  
+.no-csstransforms .nav__navbar li.active a {
+    background-color: #6F325C;
+    color: #fff;
+}
+
+/***** Navigation Responsiveness *****/
+@media screen and (max-width:480px){
+.nav__navbar{
+    font-size: .68em;
+  }
+  .nav__button{
+    font-size: 1em;
+  }
+.nav__navbar li {
+    font-size: 1.52em;
+  }
+}
+
+@media screen and (max-width:320px){
+  .no-csstransforms .nav__navbar{
+    width: 15.15px;
+    margin-left: -7.5em;
+  }
+  .no-csstransforms .nav__navbar li{
+    height: 3em;
+    width: 3em;
+  }
+}
