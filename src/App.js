@@ -17,7 +17,8 @@ class App extends Component {
   state = {
     registerDisplay: 'none',
     loginDisplay: 'none',
-    loggedUser: {}
+    loggedUser: {},
+    loginError: ''
   }
 
   toggleRegister = () => {
@@ -35,9 +36,38 @@ class App extends Component {
   }
 
   loginUser = (user) => {
-    this.setState({
-      loggedUser: user
-    });
+    try {
+      const loginResponse = await fetch('http://localhost:3000/auth/login', {
+        method: 'POST',
+        credentials: 'include',
+        body: JSON.stringify(user),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (!loginResponse.ok) {
+        throw Error(loginResponse.statusText)
+      }
+
+      const parsedResponse = await loginResponse.json();
+
+      if (parsedResponse.data === 'login successful') {
+        //Resets this component's state if a use was successfully logged in
+        this.setState({
+          loggedUser: user
+        });
+
+        this.props.history.push(`/users/${parsedResponse.createdUser._id}`);
+      } else {
+        this.setState({
+          loginError: parsedResponse.data
+        });
+      }
+
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   render() {
