@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import '../../App.css';
 
 class UserProfile extends Component {
     render() {
