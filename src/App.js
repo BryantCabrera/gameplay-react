@@ -20,7 +20,6 @@ class App extends Component {
     loggedUser: {},
     loginError: '',
     users: [],
-    selectedUser: {},
     logoutMessage: ''
   }
 
@@ -58,8 +57,8 @@ class App extends Component {
       if (parsedResponse.data === 'login successful') {
         //Resets this component's state if a use was successfully logged in
         this.setState({
-          loggedUser: parsedResponse.user,
-          selectedUser: parsedResponse.user
+          loggedUser: parsedResponse.user
+          // selectedUser: parsedResponse.user
         });
 
         this.props.history.push(`/users/${parsedResponse.user._id}`);
@@ -94,7 +93,7 @@ class App extends Component {
         //Resets this component's state if a use was successfully logged in
         this.setState({
           loggedUser: {},
-          selectedUser: {},
+          // selectedUser: {},
           logoutMessage: parsedResponse.data
         });
 
@@ -134,11 +133,11 @@ class App extends Component {
     }
   }
 
-  selectUser = (user) => {
-    this.props.setState({
-      selectedUser: user
-    });
-  }
+  // selectUser = (user) => {
+  //   this.props.setState({
+  //     selectedUser: user
+  //   });
+  // }
 
   render () {
     return (
@@ -152,7 +151,7 @@ class App extends Component {
           {/* <Route exact path="/login" component={() =>  <Login history={this.props.history} toggleLogin={this.toggleLogin} loginDisplay={this.state.loginDisplay} /> } /> */}
           <Route exact path="/" component={() => <Main history={this.props.history} /> } />
           <Route exact path="/games" component={() => <Games history={this.props.history} /> } />
-          <Route exact path="/users" component={() => <Users history={this.props.history} users={this.state.users} selectUser={this.selectUser} /> } />
+          <Route exact path="/users" component={() => <Users history={this.props.history} users={this.state.users} /> } />
           <Route exact path="/users/:id" component={() => <UserProfile history={this.props.history} loggedUser={this.state.loggedUser} /> } />
         </Switch>
         <Chat />

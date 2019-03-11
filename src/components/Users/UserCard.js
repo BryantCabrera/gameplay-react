@@ -50,7 +50,7 @@ class UserCard extends Component {
                     <h4>
                         Be Social
                     </h4>
-                    <Link to={`/users/${this.props.user._id}`} onClick={() => this.props.selectUser(this.props.user)}><FontAwesomeIcon icon={faUserPlus} /></Link>
+                    <Link to={`/users/${this.props.user._id}`} ><FontAwesomeIcon icon={faUserPlus} /></Link>
                 </div>
             </article>
         )

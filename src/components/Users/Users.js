@@ -17,7 +17,7 @@ class Users extends Component {
                 {this.props.users.map(user => {
                     return (
                         <li className="users__list-item" key={user._id}>
-                            <UserCard user={user} selectUser={this.props.selectUser} />
+                            <UserCard user={user} />
                         </li>
                     )
                 })}

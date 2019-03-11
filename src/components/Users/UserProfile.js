@@ -8,7 +8,6 @@ class UserProfile extends Component {
     }
 
     componentDidMount = async () => {
-        console.log(this.props.match.params.id);
         try {
             const response = await fetch(`${process.env.REACT_APP_API_URL}/users/${this.props.match.params.id}`, {
                 method: 'GET',
