@@ -27,27 +27,13 @@ class Login extends Component {
         e.preventDefault();
 
         const { email, password } = this.state;
+        const user = {
+            email: email,
+            password: password
+        }
 
         if (this.state.email && this.state.password) {
-            this.props.mutate({
-                variables: { input: { email, password } },
-                update: (store, { data: { loginUser } }) => {
-                    // Reads our data from our cache (store)
-                    const data = store.readQuery({ query: LoggedUserQuery });
-                    console.log(data, ' data from Login.js');
-                    const user = loginUser;
-
-                    // data.getUsers.push(loginUser);
-
-                    // data.getLoggedUser.push(loginUser);
-                    // store.writeQuery({ query: LoggedUserQuery, data});
-
-
-                    console.log(user, ' user from Login.js');
-
-                    this.props.loginUser(user);
-                }
-            });
+            this.props.loginUser(user);
         } else {
             // If the password verification does not match, reset password and verify_password input fields and display error message.
             this.setState({
