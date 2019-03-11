@@ -73,7 +73,7 @@ class App extends Component {
 
   getUsers = () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/users`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/users`, {
         method: 'GET',
         credentials: 'include',
         headers: {
@@ -87,7 +87,7 @@ class App extends Component {
 
       const parsedResponse = await response.json();
       this.setState({
-        users: parsedResponse.users
+        users: parsedResponse.data
       });
 
     } catch (err) {
@@ -107,7 +107,7 @@ class App extends Component {
           {/* <Route exact path="/register" component={() =>  <Register history={this.props.history} /> } /> */}
           {/* <Route exact path="/login" component={() =>  <Login history={this.props.history} toggleLogin={this.toggleLogin} loginDisplay={this.state.loginDisplay} /> } /> */}
           <Route exact path="/games" component={() => <Games history={this.props.history} />} />
-          <Route exact path="/users" component={() => <Users history={this.props.history} />} />
+          <Route exact path="/users" component={() => <Users history={this.props.history} users={this.state.users} />} />
           <Route exact path="/users/id" component={() => <UserProfile history={this.props.history} />} />
         </Switch>
         <Chat />
