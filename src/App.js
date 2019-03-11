@@ -37,7 +37,7 @@ class App extends Component {
   loginUser = (user) => {
     this.setState({
       loggedUser: user
-    })
+    });
   }
 
   render() {
@@ -45,7 +45,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Main />
-        <Register history={this.props.history} registerDisplay={this.state.registerDisplay} toggleRegister={this.toggleRegister} />
+        <Register history={this.props.history} registerDisplay={this.state.registerDisplay} toggleRegister={this.toggleRegister} loginUser={this.loginUser} />
         <Login history={this.props.history} loginDisplay={this.state.loginDisplay} toggleLogin={this.toggleLogin} loginUser={this.loginUser} />
         <NavBar toggleRegister={this.toggleRegister} toggleLogin={this.toggleLogin} />
         <Switch>
