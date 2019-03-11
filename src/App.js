@@ -99,6 +99,7 @@ class App extends Component {
         });
 
         this.props.history.push(`/`);
+        
       } else {
         this.setState({
           loginError: parsedResponse.data
