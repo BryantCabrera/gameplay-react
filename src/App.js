@@ -26,7 +26,7 @@ class App extends Component {
         _id: "tictactoe",
         title: "Tic-Tac-Toe",
         author: "Bryant Cabrera",
-        description: "",
+        description: "Grab 3 consecutive rooms in the same row, column, or diagonal to win!",
         playTime: "2 min",
         img: "/tictactoe.png"
       },
@@ -34,7 +34,7 @@ class App extends Component {
         _id: "connect4",
         title: "Connect 4",
         author: "Bryant Cabrera & Kevin Cuison",
-        description: "",
+        description: "Connect 4 of your pieces in a row, column, or diagonal to win!",
         playTime: "5 min",
         img: "/connect4-black.png"
       },
@@ -42,7 +42,7 @@ class App extends Component {
         _id: "blackjack",
         title: "Black Jack",
         author: "Bryant Cabrera & Michael Siller",
-        description: "",
+        description: "Closest to 21 without going over wins! Aces are 1 or 11, faces are 10.",
         playTime: "2 min",
         img: "/blackjack.png"
       },
@@ -50,7 +50,7 @@ class App extends Component {
         _id: "catan",
         title: "Settlers of Catan",
         author: "Bryant Cabrera",
-        description: "",
+        description: "Manage your resources and spread your settlements to be the 1st to get to 10 victory points!",
         playTime: "1 hr",
         img: "/catan.png"
       }
