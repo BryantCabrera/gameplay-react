@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import '../../App.css';
 
 class Games extends Component {
@@ -26,7 +28,11 @@ class Games extends Component {
                                             </div>
 
                                             <div className="one-third">
-                                            <div className="stat">16</div>
+                                            <div className="stat">
+                                                <NavLink exact to={`/games/${game._id}`} onClick={this.props.toggleRegister}>
+                                                    <FontAwesomeIcon className="stat__icon" icon={faPlay} />
+                                                </NavLink>
+                                            </div>
                                             <div className="stat-value">Play</div>
                                             </div>
 

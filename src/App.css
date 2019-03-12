@@ -1143,6 +1143,9 @@ form {
   font-size: 24px;
   margin-bottom: 10px;
 }
+.stat__icon {
+  color: #fff;
+}
 .game-card__unit-stats .stat-value {
   text-transform: uppercase;
   font-weight: 400;
