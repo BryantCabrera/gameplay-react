@@ -76,18 +76,21 @@ class App extends Component {
   logoutUser = async () => {
     try {
       const logoutResponse = await fetch(`${process.env.REACT_APP_API_URL}/auth/logout`, {
-        method: 'POST',
+        method: 'GET',
         credentials: 'include',
         headers: {
           'Content-Type': 'application/json'
         }
       });
 
-      if (!logoutResponse.message) {
+      console.log(logoutResponse, 'logout Response');
+
+      if (!logoutResponse.ok) {
         throw Error(logoutResponse.error)
       }
 
       const parsedResponse = await logoutResponse.json();
+      console.log(parsedResponse, ' this is parsedResponse from logout function in App.js.');
 
       if (parsedResponse.data === 'User successfully logged out.') {
         //Resets this component's state if a use was successfully logged in
@@ -105,7 +108,7 @@ class App extends Component {
         });
       }
     } catch (err) {
-      console.log(err);
+      console.log(err.message);
     }
   }
 
