@@ -219,18 +219,28 @@ class App extends Component {
           <Route
             exact
             path="/"
-            component={() => <Main history={this.props.history} />}
+            component={() => (
+              <Main history={this.props.history} games={this.state.games} />
+            )}
           />
           <Route
             exact
             path="/games"
-            component={() => <Games history={this.props.history} games={this.state.games} />}
+            component={() => (
+              <Games
+                history={this.props.history}
+                games={this.state.games}
+              />
+            )}
           />
           <Route
             exact
             path="/users"
             component={() => (
-              <Users history={this.props.history} users={this.state.users} />
+              <Users
+                history={this.props.history}
+                users={this.state.users}
+              />
             )}
           />
           <Route
