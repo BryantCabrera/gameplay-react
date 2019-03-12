@@ -8,8 +8,8 @@ class TicTacToe extends Component {
         return (
             <Iframe 
                 url="https://bryant-tic-tac-toe.herokuapp.com/"
-                width="450px"
-                height="450px"
+                width="95%"
+                height="80vw"
                 id="myId"
                 className="myClassname"
                 display="initial"
@@ -20,4 +20,4 @@ class TicTacToe extends Component {
     }
 }
 
-export default withRouter(Games);
+export default withRouter(TicTacToe);
