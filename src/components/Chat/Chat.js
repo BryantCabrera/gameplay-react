@@ -29,7 +29,6 @@ class Chat extends Component {
     render() {
         return (
             <div className="chat">
-                This is chat.
                 <Launcher
                     className="chat__window"
                     agentProfile={{

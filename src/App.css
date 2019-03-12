@@ -186,206 +186,205 @@ a:active {
 }
 
 .nav__button {
-    position: fixed;
-    left: 50%;
-    bottom: -1.75em;
-    height: 3.5em;
-    width: 3.5em;
-    margin-left: -1.75em;
-    padding-bottom: 1em;
-    border: none;
-    background: none;
-    border-radius: 50%;
-    text-align: Center;
-    font-size: 2.4em;
-    background-color: #111;
-    color: white;
-    cursor: pointer;
-    z-index: 11
+  position: fixed;
+  left: 50%;
+  bottom: -1.75em;
+  height: 3.5em;
+  width: 3.5em;
+  margin-left: -1.75em;
+  padding-bottom: 1em;
+  border: none;
+  background: none;
+  border-radius: 50%;
+  text-align: Center;
+  font-size: 2.4em;
+  background-color: #111;
+  color: white;
+  cursor: pointer;
+  z-index: 11
 }
 
 .nav__button:hover,
 .nav__button:active,
 .nav__button:focus {
-    background-color: #222;
-    outline: none;
+  background-color: #222;
+  outline: none;
 }
 
 /***** Overlay *****/
 .nav__overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.6);
-    opacity: 0;
-    transition: all .3s ease;
-    z-index: 2;
-    pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: all .3s ease;
+  z-index: 2;
+  pointer-events: none;
 }
   
 /* This is the class added to the overlay in component that shows it when the navigation is open */
 .nav__overlay.on-overlay{
-    opacity: 1;
-    pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /***** List Items *****/
 .nav__navbar li {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10em;
-    height: 10em;
-    margin-top: -1.3em;
-    margin-left: -10em;
-    transform-origin: 100% 100%;
-    overflow: hidden;
-    font-size: 1.5em;
-    transition: border .3s ease;
-    z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10em;
+  height: 10em;
+  margin-top: -1.3em;
+  margin-left: -10em;
+  transform-origin: 100% 100%;
+  overflow: hidden;
+  font-size: 1.5em;
+  transition: border .3s ease;
+  z-index: 3;
 }
   
 .nav__navbar li a {
-    position: absolute;
-    right: -7.25em;
-    bottom: -7.25em;
-    display: block;
-    height: 14.5em;
-    width: 14.5em;
-    padding-top: 1.8em;
-    border-radius: 50%;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.18em;
-    color: #fff;
-    transform: skew(-50deg) rotate(-70deg) scale(1);
-    transition: opacity 0.3s, color 0.3s;
+  position: absolute;
+  right: -7.25em;
+  bottom: -7.25em;
+  display: block;
+  height: 14.5em;
+  width: 14.5em;
+  padding-top: 1.8em;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.18em;
+  color: #fff;
+  transform: skew(-50deg) rotate(-70deg) scale(1);
+  transition: opacity 0.3s, color 0.3s;
 }
   
 .nav__navbar li a span {
-    font-size: 1.1em;
-    opacity: 0.7;
+  font-size: 1.1em;
+  opacity: 0.7;
 }
   /* for a central angle x, the list items must be skewed by 90-x degrees
   in our case x=40deg so skew angle is 50deg
   items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
   
 .nav__navbar li:first-child {
-    transform: rotate(-10deg) skew(50deg);
+  transform: rotate(-10deg) skew(50deg);
 }
   
 .nav__navbar li:nth-child(2) {
-    transform: rotate(30deg) skew(50deg);
+  transform: rotate(30deg) skew(50deg);
 }
   
 .nav__navbar li:nth-child(3) {
-    transform: rotate(70deg) skew(50deg)
+  transform: rotate(70deg) skew(50deg);
 }
   
 .nav__navbar li:nth-child(4) {
-    transform: rotate(110deg) skew(50deg);
+  transform: rotate(110deg) skew(50deg);
 }
   
 .nav__navbar li:nth-child(5) {
-    transform: rotate(150deg) skew(50deg);
+  transform: rotate(150deg) skew(50deg);
 }
   
 .nav__navbar li:nth-child(odd) a {
-    background-color: var(--color-primary-dark); /*#a11313*/
-    background-color: var(--color-primary-dark); /*hsla(0, 88%, 63%, 1)*/
+  background-color: var(--color-primary-dark); /*#a11313*/
+  background-color: var(--color-primary-dark); /*hsla(0, 88%, 63%, 1)*/
 }
   
 .nav__navbar li:nth-child(even) a {
-    background-color: var(--color-primary-darkest); /*#a61414*/
-    background-color: var(--color-primary-darkest); /*hsla(0, 88%, 65%, 1)*/
+  background-color: var(--color-primary-darkest); /*#a61414*/
+  background-color: var(--color-primary-darkest); /*hsla(0, 88%, 65%, 1)*/
 }
   
 /* active style */
 .nav__navbar li.active a {
-    background-color: var(--color-primary-light); /*#b31515*/
-    background-color: var(--color-primary-light); /*hsla(0, 88%, 70%, 1)*/
+  background-color: var(--color-primary-light); /*#b31515*/
+  background-color: var(--color-primary-light); /*hsla(0, 88%, 70%, 1)*/
 }
   
 /* hover style */
 .nav__navbar li:not(.active) a:hover,
 .nav__navbar li:not(.active) a:active,
 .nav__navbar li:not(.active) a:focus {
-    background-color: var(--color-primary-light); /*#b31515*/
-    background-color: var(--color-primary-light); /* hsla(0, 88%, 70%, 1) #6F325C*/
-    
+  background-color: var(--color-primary-light); /*#b31515*/
+  background-color: var(--color-primary-light); /* hsla(0, 88%, 70%, 1) #6F325C*/
 }
 .nav__navbar li:not(.active) a:focus {
-    /* fixes the "displacement" bug in webkit browsers when using tab key */
-    position: fixed; 
+  /* fixes the "displacement" bug in webkit browsers when using tab key */
+  position: fixed; 
 }
 
 /***** Browser Support for No CSS Transforms *****/
 .no-csstransforms .nav__navbar{
-    height: 5em;
-    width: 25.15em;
-    left: 50%;
-    bottom: 0;
-    margin-left: -12.5em;
-    border: 1px solid #ddd;
-    font-size: 1em;
-    overflow: hidden;
-    position: fixed;
-    z-index: 10;
+  height: 5em;
+  width: 25.15em;
+  left: 50%;
+  bottom: 0;
+  margin-left: -12.5em;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  overflow: hidden;
+  position: fixed;
+  z-index: 10;
 }
   
 .no-csstransforms .nav__button{
-    display: none;
+  display: none;
 }
   
 .no-csstransforms .nav__navbar li{
-    position: static;
-    height: 5em;
-    width: 5em;
-    float: left;
-    background-color: #eee;
-    text-align: center;
-    line-height: 5em;
-    font-size: 1em;
+  position: static;
+  height: 5em;
+  width: 5em;
+  float: left;
+  background-color: #eee;
+  text-align: center;
+  line-height: 5em;
+  font-size: 1em;
 }
   
 .no-csstransforms .nav__navbar li a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-right: 1px solid #ddd;
-    text-decoration: none;
-    font-size: 1.3em;
-    color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid #ddd;
+  text-decoration: none;
+  font-size: 1.3em;
+  color: inherit;
 }
   
 .no-csstransforms .nav__navbar li a:last-child{
-    border: none;
+  border: none;
 }
   
 .no-csstransforms .nav__navbar li a:hover,
 .no-csstransforms .nav__navbar li a:active,
 .no-csstransforms .nav__navbar li a:focus{
-    background-color: white;
+  background-color: white;
 }
   
 .no-csstransforms .nav__navbar li.active a {
-    background-color: #6F325C;
-    color: #fff;
+  background-color: #6F325C;
+  color: #fff;
 }
 
 /***** Navigation Responsiveness *****/
 @media screen and (max-width:480px){
-.nav__navbar{
+  .nav__navbar{
     font-size: .68em;
   }
   .nav__button{
     font-size: 1em;
   }
-.nav__navbar li {
+  .nav__navbar li {
     font-size: 1.52em;
   }
 }
@@ -952,6 +951,224 @@ form {
 }
 .material-card.Teal.mc-active .mc-btn-action {
   border-color: #E0F2F1;
+}
+
+/******************************/
+/********** Games **********/
+/******************************/
+.games {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/***** Game Card *****/
+.slide-container {
+  margin: auto;
+  width: 600px;
+  text-align: center;
+}
+
+.wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 0 2rem;
+}
+.wrapper:focus {
+  outline: 0;
+}
+
+.game-card {
+  background: white;
+  width: 300px;
+  display: inline-block;
+  margin: auto;
+  border-radius: 19px;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
+}
+
+.game-card__image {
+  position: relative;
+  height: 230px;
+  margin-bottom: 35px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+.game-card__image--tictactoe {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg");
+}
+.game-card__image--tictactoe img {
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  width: 110%;
+}
+
+.game-card__image--connect4 {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg");
+}
+.game-card__image--connect4 img {
+  position: absolute;
+  top: 25%;
+  left: -3.7rem;
+  width: 120%;
+}
+
+.game-card__image--blackjack {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant-bg.jpg");
+}
+.game-card__image--blackjack img {
+  width: 340px;
+  position: absolute;
+  top: -30px;
+  left: -25px;
+}
+
+.game-card__image--goblin {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin-bg.jpg");
+}
+.game-card__image--goblin img {
+  width: 370px;
+  position: absolute;
+  top: -21px;
+  left: -37px;
+}
+
+.game-card__image--catan {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard-bg.jpg");
+}
+.game-card__image--catan img {
+  width: 120%;
+  position: absolute;
+  top: -10rem;
+  left: -1rem;
+}
+
+.game-card__level {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.game-card__level--tictactoe {
+  color: #EC9B3B;
+}
+
+.game-card__level--connect4 {
+  color: #EE5487;
+}
+
+.game-card__level--blackjack {
+  color: #F6901A;
+}
+
+.game-card__level--goblin {
+  color: #82BB30;
+}
+
+.game-card__level--catan {
+  color: #4FACFF;
+}
+
+.game-card__unit-name {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.game-card__unit-description {
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.game-card__unit-stats--tictactoe {
+  background: #EC9B3B;
+}
+.game-card__unit-stats--tictactoe .one-third {
+  border-right: 1px solid #BD7C2F;
+}
+
+.game-card__unit-stats--connect4 {
+  background: #EE5487;
+}
+.game-card__unit-stats--connect4 .one-third {
+  border-right: 1px solid #D04976;
+}
+
+.game-card__unit-stats--blackjack {
+  background: #F6901A;
+}
+.game-card__unit-stats--blackjack .one-third {
+  border-right: 1px solid #de7b09;
+}
+
+.game-card__unit-stats--goblin {
+  background: #82BB30;
+}
+.game-card__unit-stats--goblin .one-third {
+  border-right: 1px solid #71a32a;
+}
+
+.game-card__unit-stats--catan {
+  background: #4FACFF;
+}
+.game-card__unit-stats--catan .one-third {
+  border-right: 1px solid #309eff;
+}
+
+.game-card__unit-stats {
+  color: white;
+  font-weight: 700;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+.game-card__unit-stats .one-third {
+  width: 33%;
+  float: left;
+  padding: 20px 15px;
+}
+.game-card__unit-stats sup {
+  position: absolute;
+  bottom: 4px;
+  font-size: 45%;
+  margin-left: 2px;
+}
+.game-card__unit-stats .stat {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.game-card__unit-stats .stat-value {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+}
+.game-card__unit-stats .no-border {
+  border-right: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.slick-prev {
+  left: 100px;
+  z-index: 999;
+}
+
+.slick-next {
+  right: 100px;
+  z-index: 999;
 }
 
 /******************************/
