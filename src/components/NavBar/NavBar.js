@@ -47,7 +47,7 @@ class NavBar extends Component {
 
     render() {
         return (
-            <div className="nav">
+            <div className="nav" onClick={this.handleClick}>
                 <button id="nav__button" className="nav__button" onClick={this.handleClick}>{this.state.buttonText}</button>
                 <nav className={`nav__navbar${this.state.wrapperClass}`}>
                     <ul className="nav__navbar__links">
