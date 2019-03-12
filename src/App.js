@@ -194,6 +194,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <Chat />
+        <Footer />
         <Register
           history={this.props.history}
           registerDisplay={this.state.registerDisplay}
@@ -254,8 +256,6 @@ class App extends Component {
             )}
           />
         </Switch>
-        <Chat />
-        <Footer />
       </div>
     );
   }

@@ -40,7 +40,7 @@ class UserCard extends Component {
                         <img className="mc__img" src={this.props.user.img} alt="User Profile" title="User Profile"></img>
                     </div>
                     <div className="mc-description">
-                        He comes from a well-known acting family and began his televised acting in 1958 as a child with his father, Lloyd Bridges, and brother, Beau, on television's Sea Hunt ...
+                        <h3>Here are the games I've played</h3>
                     </div>
                 </div>
                 <div className={this.state.iconClass} onClick={this.toggleIconClass}>

@@ -752,11 +752,13 @@ form {
 }
 .material-card .mc-description {
   position: absolute;
+  height: 100%; /* new addition */
   top: 100%;
   right: 30px;
   left: 30px;
   bottom: 54px;
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow: scroll;
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: all 1.2s;
