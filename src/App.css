@@ -405,21 +405,42 @@ a:active {
 /********** Header **********/
 /******************************/
 .header {
-    position: relative;
-    height: 5rem;
-    width: 100%;
-    background-color: transparent;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: 5rem;
+  width: 100%;
+  background-color: transparent;
 }
 
 .header__logo--link {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .header__logo {
   height: 5rem;
   width: auto;
+}
+
+.header__links {
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__links--item {
+  margin: 1rem;
+  list-style: none;
+}
+
+.header__links--item--github,
+.header__links--item--linkedin {
+  height: 5rem;
+  width: 5rem;
 }
 
 .header__bryant {
