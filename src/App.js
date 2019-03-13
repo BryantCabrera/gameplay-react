@@ -243,6 +243,7 @@ class App extends Component {
               <TicTacToe
                 history={this.props.history}
                 games={this.state.games}
+                loggedUser={this.state.loggedUser}
               />
             )}
           />
