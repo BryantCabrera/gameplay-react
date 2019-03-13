@@ -192,6 +192,35 @@ class App extends Component {
   //   });
   // }
 
+  updateUser = async (user) => {
+    if (this.state.loggedUser._id) {
+      try {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/users/${this.state.loggedUser._id}`, {
+          method: 'PUT',
+          credentials: 'include',
+          body: JSON.stringify(user),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+  
+        if (!response.ok) {
+          throw Error()
+        }
+  
+        const parsedResponse = await response.json();
+        if (parsedResponse) {
+          this.setState({
+            loggedUser: parsedResponse
+          });
+        }
+  
+      } catch (err) {
+        console.log(err, ' This is error from EditProfile.js');
+      }
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -245,6 +274,7 @@ class App extends Component {
                 history={this.props.history}
                 games={this.state.games}
                 loggedUser={this.state.loggedUser}
+                updateUser={this.updateUser}
               />
             )}
           />
