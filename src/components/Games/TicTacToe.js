@@ -18,22 +18,6 @@ class TicTacToe extends Component {
         postMessageData: {}
     }
 
-    componentDidMount () {
-        // console.log(this.props, ' loggedUser from TicTacToe.js props.');
-        // if (this.props.loggedUser.email) console.log(this.props.loggedUser, ' loggedUser from TicTacToe.js props.');
-        // if (this.props.loggedUser.email) {
-        //     this.setState({
-        //         postMessageData: this.props.loggedUser
-        //     });
-        //     console.log(this.state.postMessageData, ' postMessageData from TicTacToe.js');
-        // } else {
-        //     this.setState ({
-        //         postMessageData: {}
-        //     });
-        //     console.log(this.state.postMessageData, ' postMessageData from TicTacToe.js');
-        // }
-    }
-
     onReceiveMessage = (message) => {
         console.log("onReceiveMessage");
         console.log(message.data, ' This is data from onReceiveMessage in TicTacToe.js');
