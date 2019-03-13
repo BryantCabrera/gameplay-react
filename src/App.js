@@ -107,7 +107,8 @@ class App extends Component {
           // selectedUser: parsedResponse.user
         });
 
-        this.props.history.push(`/users/${parsedResponse.user._id}`);
+        // this.props.history.push(`/users/${parsedResponse.user._id}`);
+        this.props.history.push(`/games`);
       } else {
         this.setState({
           loginError: parsedResponse.data
