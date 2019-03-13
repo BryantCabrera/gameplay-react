@@ -9,14 +9,6 @@ class Login extends Component {
         error: ''
     }
 
-    // componentDidMount = () => {
-    //     console.log(this.props, ' Login props');
-    // }
-
-    openModal = (e) => {
-
-    }
-
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value

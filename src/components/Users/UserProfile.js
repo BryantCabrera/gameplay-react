@@ -34,11 +34,11 @@ class UserProfile extends Component {
     render() {
         return (
             <div className="user-profile">
-                {/* <h1>{this.state.user.username}'s Profile</h1>
+                <h1>{this.state.user.username}'s Profile</h1>
                 
                 {this.props.loggedUser._id === this.state.user._id ? <div className="btn" onClick={() => console.log('Editing...')}>Edit Profile</div> : ''}
 
-                <div class="container">
+                {/* <div class="container">
                     <header>
                         <i class="fa fa-bars" aria-hidden="true"></i>
                     </header>
