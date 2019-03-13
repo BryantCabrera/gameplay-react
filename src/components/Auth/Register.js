@@ -64,7 +64,7 @@ class Register extends Component {
 
                 const parsedResponse = await loginResponse.json();
 
-                if (parsedResponse.data === 'login successful') {
+                if (parsedResponse.data === 'Registration successful.') {
                     //Resets this component's state if a use was successfully logged in
                     this.setState({
                         username: '',
@@ -82,6 +82,7 @@ class Register extends Component {
                         error: ''
                     })
                     this.props.loginUser(parsedResponse.createdUser);
+                    this.props.toggleRegister();
                     this.props.history.push(`/users/${parsedResponse.createdUser._id}`);
                 }
 

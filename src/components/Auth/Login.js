@@ -34,6 +34,7 @@ class Login extends Component {
 
         if (this.state.email && this.state.password) {
             this.props.loginUser(user);
+            this.props.toggleLogin();
         } else {
             // If the password verification does not match, reset password and verify_password input fields and display error message.
             this.setState({
