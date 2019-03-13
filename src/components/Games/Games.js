@@ -10,7 +10,7 @@ class Games extends Component {
             <div className="games">
                 {this.props.games.map((game, index) => (
                             // <div className="slide-container">
-                                <div className="wrapper">
+                                <div className="wrapper" key={index}>
                                     <div className={`game-card ${game._id}`}>
                                         <div className={`game-card__image game-card__image--${game._id}`}>
                                             <img src={game.img} alt="barbarian" />
