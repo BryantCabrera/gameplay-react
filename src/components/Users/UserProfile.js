@@ -34,11 +34,11 @@ class UserProfile extends Component {
     render() {
         return (
             <div className="user-profile">
-                <h1>{this.state.user.username}'s Profile</h1>
+                {/* <h1>{this.state.user.username}'s Profile</h1>
                 
                 {this.props.loggedUser._id === this.state.user._id ? <div className="btn" onClick={() => console.log('Editing...')}>Edit Profile</div> : ''}
 
-                {/* <div class="container">
+                <div class="container">
                     <header>
                         <i class="fa fa-bars" aria-hidden="true"></i>
                     </header>
@@ -54,6 +54,7 @@ class UserProfile extends Component {
                                 <p class="info">{this.state.user.email}</p>
                                 <div class="stats row">
                                     <div class="stat col-xs-4" style="padding-right: 50px;">
+                                    <div class="stat col-xs-4">
                                         <p class="number-stat">3,619</p>
                                         <p class="desc-stat">Followers</p>
                                     </div>
@@ -62,6 +63,7 @@ class UserProfile extends Component {
                                         <p class="desc-stat">Following</p>
                                     </div>
                                     <div class="stat col-xs-4" style="padding-left: 50px;">
+                                    <div class="stat col-xs-4">
                                         <p class="number-stat">38</p>
                                         <p class="desc-stat">Uploads</p>
                                     </div>
