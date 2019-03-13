@@ -19,9 +19,9 @@ class TicTacToe extends Component {
     }
 
     onReceiveMessage = async (message) => {
-        console.log("onReceiveMessage");
-        console.log(message.data, ' This is data from onReceiveMessage in TicTacToe.js');
-        if (this.props.loggedUser._id) {
+        // console.log("onReceiveMessage");
+        // console.log(message.data, ' This is data from onReceiveMessage in TicTacToe.js');
+        if (message.data._id) {
             await this.props.updateUser(message.data);
         } else {
             console.log('There was an error and your gameplay info could not be saved to the server.');

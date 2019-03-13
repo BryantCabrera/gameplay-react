@@ -210,9 +210,11 @@ class App extends Component {
   
         const parsedResponse = await response.json();
         if (parsedResponse) {
-          this.setState({
-            loggedUser: parsedResponse
-          });
+          //this causes refreshes
+          // this.setState({
+          //   loggedUser: parsedResponse
+          // });
+          console.log(' User info was successfully updated.');
         }
   
       } catch (err) {
