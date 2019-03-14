@@ -165,24 +165,24 @@ a:active {
 
 /***** Navigation Wheel *****/
 .nav__navbar {
-    position: fixed;
-    left: 50%;
-    bottom: -13em;
-    width: 26em;
-    height: 26em;
-    margin-left: -13em;
-    overflow: hidden;
-    font-size:1em;
-    border-radius: 50%;
-    transform: scale(0.1);
-    transition: all .3s ease;
-    z-index: 10;
+  position: fixed;
+  left: 50%;
+  bottom: -13em;
+  width: 26em;
+  height: 26em;
+  margin-left: -13em;
+  overflow: hidden;
+  font-size:1em;
+  border-radius: 50%;
+  transform: scale(0.1);
+  transition: all .3s ease;
+  z-index: 10;
 }
 
 /* this is the class applied to the component that will scale the navigation up */
 .opened-nav {
-    border-radius: 50%;
-    transform: scale(1);
+  border-radius: 50%;
+  transform: scale(1);
 }
 
 .nav__button {
@@ -1155,7 +1155,7 @@ form {
   color: #fff;
 }
 .game-card__unit-stats__play:hover {
-  background-color: var(--color-secondary);
+  background-color: var(--color-secondary-dark);
 }
 .game-card__unit-stats .no-border {
   border-right: none;

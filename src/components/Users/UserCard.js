@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft, faBars, faStar, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faBars, faStar, faUser } from '@fortawesome/free-solid-svg-icons';
 import '../../App.css';
 
 class UserCard extends Component {
@@ -50,7 +50,7 @@ class UserCard extends Component {
                     <h4>
                         Be Social
                     </h4>
-                    <Link to={`/users/${this.props.user._id}`} ><FontAwesomeIcon icon={faUserPlus} /></Link>
+                    <Link to={`/users/${this.props.user._id}`} ><FontAwesomeIcon icon={faUser} /></Link>
                 </div>
             </article>
         )
