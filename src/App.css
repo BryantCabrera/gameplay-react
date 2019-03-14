@@ -1152,6 +1152,10 @@ form {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 12px;
+  color: #fff;
+}
+.game-card__unit-stats__play:hover {
+  background-color: var(--color-secondary);
 }
 .game-card__unit-stats .no-border {
   border-right: none;

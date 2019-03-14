@@ -23,18 +23,19 @@ class Games extends Component {
 
                                         <div className={`game-card__unit-stats game-card__unit-stats--${game._id} clearfix`}>
                                             <div className="one-third">
-                                            <div className="stat">{game.playTime}</div>
-                                            <div className="stat-value">Time</div>
+                                                <div className="stat">{game.playTime}</div>
+                                                <div className="stat-value">Time</div>
                                             </div>
 
-                                            <NavLink exact to={`/games/${game._id}`} onClick={this.props.toggleRegister}>
-                                                <div className="one-third">
+                                            
+                                            <div className="one-third game-card__unit-stats__play">
+                                                <NavLink exact to={`/games/${game._id}`} onClick={this.props.toggleRegister}>
                                                     <div className="stat">
                                                         <FontAwesomeIcon className="stat__icon" icon={faPlay} />
                                                     </div>
                                                     <div className="stat-value">Play</div>
-                                                </div>
-                                            </NavLink>
+                                                </NavLink>
+                                            </div>
 
                                             <div className="one-third no-border">
                                             <div className="stat">150</div>
