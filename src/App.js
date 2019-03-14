@@ -44,7 +44,7 @@ class App extends Component {
       },
       {
         _id: "blackjack",
-        title: "Black Jack",
+        title: "Black Jack (Solo)",
         author: "Bryant Cabrera & Michael Siller",
         description: "Closest to 21 without going over wins! Aces are 1 or 11, faces are 10.",
         playTime: "2 min",
@@ -52,7 +52,7 @@ class App extends Component {
       },
       {
         _id: "catan",
-        title: "Settlers of Catan",
+        title: "Settlers of Catan (updates coming)",
         author: "Bryant Cabrera",
         description: "Manage your resources and spread your settlements to be the 1st to get to 10 victory points!",
         playTime: "1 hr",
