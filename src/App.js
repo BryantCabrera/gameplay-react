@@ -14,7 +14,7 @@ import TicTacToe from './components/Games/TicTacToe';
 import Connect4 from './components/Games/Connect4';
 import BlackJack from './components/Games/BlackJack';
 import SettlersOfCatan from './components/Games/SettlersOfCatan';
-import Chat from './components/Chat/Chat';
+// import Chat from './components/Chat/Chat';
 import Footer from './components/Footer/Footer';
 
 class App extends Component {
@@ -263,7 +263,6 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Chat />
         <Footer />
         <Register
           history={this.props.history}

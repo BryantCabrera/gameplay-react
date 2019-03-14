@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import Games from '../Games/Games';
+import Coverflow from 'react-coverflow';
 import '../../App.css';
 
 class Main extends Component {
@@ -12,7 +13,32 @@ class Main extends Component {
                     <div>{this.props.activityMessage}</div>
                     : 
                     ''}
-                <Games games={this.props.games}/>
+                <Coverflow width="960" height="500"
+                    displayQuantityOfSide={2}
+                    navigation={false}
+                    enableScroll={true}
+                    clickable={true}
+                    active={0}
+                >
+                {this.props.games.map((game, index) => (
+                    <div
+                    onClick={() => this.props.history.push(`/games/${game._id}`)}
+                    onKeyDown={() => console.log('clicking image')}
+                    role="menuitem"
+                    tabIndex="0"
+                    >
+                        <img
+                            src={game.img}
+                            alt={game.title}
+                            title={game.title}
+                            style={{
+                            display: 'block',
+                            width: '100%',
+                            }}
+                        />
+                    </div>
+                ))}
+                </Coverflow>
             </main>
         )
     }
