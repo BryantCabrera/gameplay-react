@@ -12,6 +12,7 @@ import UserProfile from './components/Users/UserProfile';
 import Games from './components/Games/Games';
 import TicTacToe from './components/Games/TicTacToe';
 import Connect4 from './components/Games/Connect4';
+import BlackJack from './components/Games/BlackJack';
 import SettlersOfCatan from './components/Games/SettlersOfCatan';
 import Chat from './components/Chat/Chat';
 import Footer from './components/Footer/Footer';
@@ -320,6 +321,18 @@ class App extends Component {
             path="/games/connect4"
             component={() => (
               <Connect4
+                history={this.props.history}
+                games={this.state.games}
+                loggedUser={this.state.loggedUser}
+                updateUser={this.updateUser}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/games/blackjack"
+            component={() => (
+              <BlackJack
                 history={this.props.history}
                 games={this.state.games}
                 loggedUser={this.state.loggedUser}
