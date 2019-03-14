@@ -7,7 +7,7 @@ import '../../App.css';
 class TicTacToe extends Component {
     state = {
         attributes: {
-            src: "https://clay-connect.herokuapp.com/",
+            src: "https://bryant-tic-tac-toe.herokuapp.com/",
             width: "100%",
             height: "795",
             frameBorder: 1, // show frame border just for fun...

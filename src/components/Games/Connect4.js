@@ -6,7 +6,7 @@ import '../../App.css';
 class Connect4 extends Component {
     state = {
         attributes: {
-            src: "https://connect4-socket.herokuapp.com/",
+            src: "https://clay-connect.herokuapp.com/",
             width: "100%",
             height: "795",
             frameBorder: 1, // show frame border just for fun...
