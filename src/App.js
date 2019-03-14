@@ -32,7 +32,7 @@ class App extends Component {
         author: "Bryant Cabrera",
         description: "Grab 3 consecutive rooms in the same row, column, or diagonal to win!",
         playTime: "2 min",
-        img: "/tictactoe.png"
+        img: "/imgs/tictactoe.png"
       },
       {
         _id: "connect4",
@@ -40,7 +40,7 @@ class App extends Component {
         author: "Bryant Cabrera & Kevin Cuison",
         description: "Connect 4 of your pieces in a row, column, or diagonal to win!",
         playTime: "5 min",
-        img: "/connect4-black.png"
+        img: "/imgs/connect4-black.png"
       },
       {
         _id: "blackjack",
@@ -48,7 +48,7 @@ class App extends Component {
         author: "Bryant Cabrera & Michael Siller",
         description: "Closest to 21 without going over wins! Aces are 1 or 11, faces are 10.",
         playTime: "2 min",
-        img: "/blackjack.png"
+        img: "/imgs/blackjack.png"
       },
       {
         _id: "catan",
@@ -56,7 +56,7 @@ class App extends Component {
         author: "Bryant Cabrera",
         description: "Manage your resources and spread your settlements to be the 1st to get to 10 victory points!",
         playTime: "1 hr",
-        img: "/catan.png"
+        img: "/imgs/catan.png"
       }
     ]
   };

@@ -1,69 +1,137 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Gameplay <img src="https://i.imgur.com/Y40XSUQ.png" alt="Game Play Logo" title="Game Play Logo" height="50">
 
-## Available Scripts
 
-In the project directory, you can run:
+## A. Description
+GamePlay is a MERN stack app that acts as a game hub/lounge for web socket games.  The app uses web sockets in iFrames to communicate between the GamePlay hub app and hosted games.
 
-### `npm start`
+Link to deployed app: [https://bryant-gameplay.herokuapp.com/](https://bryant-gameplay.herokuapp.com/)
+Link to GitHub repo (front-end): [https://github.com/BryantCabrera/gameplay-react](https://github.com/BryantCabrera/gameplay-react)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Link to deployed api: [http://bryant-gameplay-server.herokuapp.com/](http://bryant-gameplay-server.herokuapp.com/)
+Link to GitHub repo (backend): [https://github.com/BryantCabrera/gameplay-express](https://github.com/BryantCabrera/gameplay-express)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Link to deployed Tic-Tac-Toe Socket Game: [https://bryant-tic-tac-toe.herokuapp.com/](https://bryant-tic-tac-toe.herokuapp.com/)
+Link to Tic-Tac-Toe Socket Game GitHub repo: [https://github.com/BryantCabrera/tic-tac-toe-socket](https://github.com/BryantCabrera/tic-tac-toe-socket)
 
-### `npm test`
+Link to deployed Settlers of Catan Game: [https://bryantcabrera.github.io/Settlers-of-Catan](https://bryantcabrera.github.io/Settlers-of-Catan)
+Link to Settlers of Catan Game GitHub repo: [https://github.com/BryantCabrera/Settlers-of-Catan](https://github.com/BryantCabrera/Settlers-of-Catan)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Relocater's back-end features a Node & Express architecture with complete CRUD capabilities using RESTful routing.  The server uses bcrypt for authentication.  
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+GamePlay was built in 2 days by Bryant Cabrera
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## B. User Stories
+User: A web gamer of any age who enjoys playing short (less than 1.5 hr) games with other users in realtime.
+```
+As a user, I want to be able to check out some of the app's features without having to sign up.
+```
+```
+As a user, I want to be able to sign in with secure authorization to store my play info.
+```
+```
+As a user, immediately after signign up, I want to be directed to my profile to edit my current salary and current county to improve my user experience.
+```
+```
+As a user, I want the app to save my play stats automatically as I finish games..
+```
+```
+As a user, I want a responsive navigation bar that is available on every page because I want access to appropriate components of the app.
+```
+```
+As a user, I don't want to have to check in again after each game ends.
+```
+```
+As a user, I want to see other users play stats so I can see who is playing the same games I am.
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## C. Images
+1. Wireframe
+    > ![Image of Wireframe - GamePlay Home](public/imgs/README/GamePlay__home.png)
+    > ![Image of Wireframe - GamePlay Register](public/imgs/README/GamePlay__register.png)
+    > ![Image of Wireframe - GamePlay Login](public/imgs/README/GamePlay__login.png)
+    > ![Image of Wireframe - GamePlay User Profile](public/imgs/README/GamePlay__user-profile.png)
+    > ![Image of Wireframe - GamePlay Games](public/imgs/README/GamePlay__games.png)
+    > ![Image of Wireframe - GamePlay Game Profile](public/imgs/README/GamePlay__game-profile.png)
+    > ![Image of Wireframe - GamePlay Edit](public/imgs/README/GamePlay__edit.png)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## D. Technologies Used
+> Front-End
+    
+    1. React
+    2. React Router
+    3. iFrame
+    4. IframeComm npm package
+    5. socket.io
+    6. react-chat-elements: [https://www.npmjs.com/package/react-chat-elements](https://www.npmjs.com/package/react-chat-elements)
+    7. BEM
+    8. Google fonts
+    Font Awesome Icons
+    9. flaticon.com
+    10. fetch
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> Back-End
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    1. node
+    2. express
+    3. mongoose
+    4. mongoDB
+    5. fetch
+    6. socket.io
+    7. mlab
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> Authentication
+    
+    1. bcrypt
 
-## Learn More
+> Socket Games
+  
+    1. socket.io
+    2. iFrames
+    3. IframeComm
+    4. jQuery
+    5. BEM
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> Planning/Organization/Design
+    
+    1. Adobe XD
+    2. Adobe Photoshop
+    3. Adobe Illustrator
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## E. Getting Started
+1. LOGGING IN: At the bottom center of the screen, toggle between Sign Up & Sign In.
+    1. If you click Sign Up (the R icon), you can create a new account. 
+        1.  Enter your email address and password.
+            > ![Image of Signup](public/imgs/README/signup.png)
+        2.  You will then be redirected to your profile edit page where you can enter your other information.
+            > ![Image of Profile Page Edit](public/imgs/README/user__profile--edit.png)
+    2. If you click Sign In, you can log into your account using your GamePlay account.
+        > ![Image of Login](public/imgs/README/signin.png)
+2.  Soon after, you will be redirected to a list of games.
+    > ![Image of Games](public/imgs/README/CA-map.png)
+4.  If you choose *__not__* to Sign Up or Log In, at the bottom center, you can click the game controller icon to navigate to the games index.  You can click on any game to play anonymously.
+    > ![Image of Games](public/imgs/README/unregistered-view.png)
+5.  You can view other users by clicking the icon of multiple people (2nd from the left) in the NavBar wheel.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+## F. Deployment workflow
+1.	React  
+2.	Node/Express
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# gameplay-react
+## G. Next Steps
+1. Unsolved problems
+    - [ ] On refresh, the app state is lost
+    - [ ] On routes other than /, the NavBar gets stuck behind the displayed component
+    - [ ] Logging in with Google OAuth does not close socket pop-up card after choosing an account to log in with
+2. Planned features
+    - [ ] Include a search bar on the games and users indices
+    - [ ] Authentication with other social media
+        - [ ] Google
+        - [ ] Facebook
+        - [ ] Twitter
+    - [ ] Include functioning chat app so users can easily give each other their game room codes
