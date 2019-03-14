@@ -21,7 +21,7 @@ class App extends Component {
     loggedUser: {},
     loginError: "",
     users: [],
-    logoutMessage: "",
+    activityMessage: "",
     games: [
       {
         _id: "tictactoe",
@@ -132,24 +132,18 @@ class App extends Component {
         }
       );
 
-      console.log(logoutResponse, "logout Response");
-
       if (!logoutResponse.ok) {
         throw Error(logoutResponse.error);
       }
 
       const parsedResponse = await logoutResponse.json();
-      console.log(
-        parsedResponse,
-        " this is parsedResponse from logout function in App.js."
-      );
 
       if (parsedResponse.data === "User successfully logged out.") {
         //Resets this component's state if a use was successfully logged in
         this.setState({
           loggedUser: {},
           // selectedUser: {},
-          logoutMessage: parsedResponse.data
+          activityMessage: parsedResponse.data
         });
 
         this.props.history.push(`/`);
@@ -218,7 +212,37 @@ class App extends Component {
         }
   
       } catch (err) {
-        console.log(err, ' This is error from EditProfile.js');
+        console.log(err, ' This is error from updateUser in App.js');
+      }
+    }
+  }
+
+  deleteUser = async (user) => {
+    if (this.state.loggedUser._id === user._id) {
+      try {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/users/${user._id}`, {
+          method: 'DELETE',
+          credentials: 'include',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+
+        if (!response.ok) {
+          throw Error()
+        }
+
+        const parsedResponse = await response.json();
+        if (parsedResponse.data === 'User successfully deleted.') {
+          // updates the activityMessage displayed on DOM
+          this.setState({
+            loggedUser: {},
+            activityMessage: parsedResponse.data
+          });
+        }
+
+      } catch (err) {
+        console.log(err, ' This is error from deleteUser in App.js.');
       }
     }
   }
@@ -255,7 +279,7 @@ class App extends Component {
             exact
             path="/"
             component={() => (
-              <Main history={this.props.history} games={this.state.games} />
+              <Main history={this.props.history} games={this.state.games} activityMessage={this.state.activityMessage} />
             )}
           />
           <Route

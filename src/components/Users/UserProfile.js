@@ -38,6 +38,8 @@ class UserProfile extends Component {
                 
                 {this.props.loggedUser._id === this.state.user._id ? <div className="btn" onClick={() => console.log('Editing...')}>Edit Profile</div> : ''}
 
+                {this.props.loggedUser._id === this.state.user._id ? <div className="btn" onClick={() => console.log('Editing...')}>Delete Profile</div> : ''}
+
                 {/* <div class="container">
                     <header>
                         <i class="fa fa-bars" aria-hidden="true"></i>
