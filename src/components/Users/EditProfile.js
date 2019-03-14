@@ -112,6 +112,7 @@ class EditProfile extends Component {
                             type="text"
                             placeholder="Username"
                             value={this.props.user.username}
+                            defaultValue={this.props.user.username}
                             onChange={this.handleChange}
                             disabled
                         >
@@ -127,6 +128,7 @@ class EditProfile extends Component {
                             type="email"
                             placeholder="Email"
                             value={this.props.user.email}
+                            defaultValue={this.props.user.email}
                             onChange={this.handleChange}
                             disabled
                         >
@@ -142,6 +144,7 @@ class EditProfile extends Component {
                             type="img"
                             placeholder="Img URL"
                             value={this.props.user.img}
+                            defaultValue={this.props.user.img}
                             onChange={this.handleChange}
                         >
                         </input>
