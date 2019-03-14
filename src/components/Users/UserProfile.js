@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import '../../App.css';
@@ -51,6 +51,13 @@ class UserProfile extends Component {
                         <div className="user-profile__desc">
                         <p className="text">
                             I love playing videogames and boardgames!  This site is perfect for my needs.  Hit me up if you need 1 more player for your rooms! 
+                            <ul className="user-profile__games">
+                                {this.props.games.map((game, index) => (
+                                    <li key={index} className="user-profile__game">
+                                        <NavLink exact to={`/games/${game._id}`}><img src={game.img}></img></NavLink>
+                                    </li>
+                                ))}
+                            </ul>
                         </p>
                         </div>
                         <div className="user-profile__social">

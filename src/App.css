@@ -1329,6 +1329,16 @@ td{
   background-size: cover;
   border-radius: 11px;
 }
+.user-profile__games{
+  display: flex;
+}
+.user-profile__game {
+  width: 100%;
+  list-style: none;
+}
+.user-profile__game img {
+  width: 70%;
+}
 
 @media screen and (min-width: 768px) {
   .user-profile__header {
