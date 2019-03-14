@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faRegistered, faSignInAlt, faSignOutAlt, faUser, faUsers, faGamepad } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faCashRegister, faSignInAlt, faSignOutAlt, faUser, faUsers, faGamepad } from '@fortawesome/free-solid-svg-icons';
 import '../../App.css';
 
 class NavBar extends Component {
@@ -57,7 +57,7 @@ class NavBar extends Component {
 
                         <li><NavLink exact to="/games"><FontAwesomeIcon icon={faGamepad} /></NavLink></li>
 
-                        {this.props.loggedUser._id ? <li><NavLink exact to={`/users/${this.props.loggedUser._id}`}><FontAwesomeIcon icon={faUser} />Me</NavLink></li> : <li><NavLink exact to="#" onClick={this.props.toggleRegister}><FontAwesomeIcon icon={faRegistered} /></NavLink></li>}
+                        {this.props.loggedUser._id ? <li><NavLink exact to={`/users/${this.props.loggedUser._id}`}><FontAwesomeIcon icon={faUser} />Me</NavLink></li> : <li><NavLink exact to="#" onClick={this.props.toggleRegister}><FontAwesomeIcon icon={faCashRegister} /></NavLink></li>}
 
                         {this.props.loggedUser._id ? <li><NavLink exact to="#" onClick={this.props.logoutUser}><FontAwesomeIcon icon={faSignOutAlt} /></NavLink></li> : <li><NavLink exact to="#" onClick={this.props.toggleLogin}><FontAwesomeIcon icon={faSignInAlt} /></NavLink></li>}
                     </ul>
