@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import '../../App.css';
 
 class UserProfile extends Component {
@@ -35,10 +37,31 @@ class UserProfile extends Component {
         return (
             <div className="user-profile">
                 <h1>{this.state.user.username}'s Profile</h1>
-                
-                {this.props.loggedUser._id === this.state.user._id ? <div className="btn" onClick={() => console.log('Editing...')}>Edit Profile</div> : ''}
 
-                {this.props.loggedUser._id === this.state.user._id ? <div className="btn" onClick={() => this.props.deleteUser(this.state.user)}>Delete Profile</div> : ''}
+                <div className="user-profile__card" id="bright">
+                    <div className="info_section">
+                        <div className="user-profile__header">
+                        <img className="locandina" src={this.state.user.img} alt={this.state.user.name} title={this.state.user.name}/>
+                        <h1>{this.state.user.name}</h1>
+                        <h4>Let's Play</h4>
+                        <span className="minutes"><FontAwesomeIcon icon={faStar} />
+                        &nbsp; Valued Gamer</span>
+                        <p className="type">10 plays until next rank</p>
+                        </div>
+                        <div className="user-profile__desc">
+                        <p className="text">
+                            I love playing videogames and boardgames!  This site is perfect for my needs.  Hit me up if you need 1 more player for your rooms! 
+                        </p>
+                        </div>
+                        <div className="user-profile__social">
+                        <ul>
+                            <li>{this.props.loggedUser._id === this.state.user._id ? <div className="btn" onClick={() => console.log('Editing...')}>Edit Profile</div> : ''}</li>
+                            <li>{this.props.loggedUser._id === this.state.user._id ? <div className="btn" onClick={() => this.props.deleteUser(this.state.user)}>Delete Profile</div> : ''}</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div className="blur_back bright_back"></div>
+                </div>
 
                 {/* <div class="container">
                     <header>

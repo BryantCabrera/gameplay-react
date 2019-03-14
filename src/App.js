@@ -372,6 +372,7 @@ class App extends Component {
                 history={this.props.history}
                 loggedUser={this.state.loggedUser}
                 deleteUser={this.deleteUser}
+                games={this.state.games}
               />
             )}
           />
