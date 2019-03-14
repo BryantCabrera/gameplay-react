@@ -59,6 +59,9 @@ class App extends Component {
   };
 
   toggleRegister = () => {
+    // Redirects to homepage
+    this.props.history.push(`/`);
+
     const display =
       this.state.registerDisplay === "none" &&
       this.state.loginDisplay === "none"
@@ -70,6 +73,9 @@ class App extends Component {
   };
 
   toggleLogin = () => {
+    // Redirects to homepage
+    this.props.history.push(`/`);
+    
     const display =
       this.state.loginDisplay === "none" &&
       this.state.registerDisplay === "none"
