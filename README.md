@@ -104,18 +104,17 @@ As a user, I want to see other users play stats so I can see who is playing the 
 
 ## E. Getting Started
 1. LOGGING IN: At the bottom center of the screen, toggle between Sign Up & Sign In.
-    1. If you click Sign Up (the R icon), you can create a new account. 
+    1. If you click Sign Up (the cash register icon), you can create a new account. 
         1.  Enter your email address and password.
-            > ![Image of Signup](public/imgs/README/signup.png)
+            > ![Image of Signup](public/imgs/README/GamePlay__register--production.png)
         2.  You will then be redirected to your profile edit page where you can enter your other information.
-            > ![Image of Profile Page Edit](public/imgs/README/user__profile--edit.png)
     2. If you click Sign In, you can log into your account using your GamePlay account.
-        > ![Image of Login](public/imgs/README/signin.png)
+        > ![Image of Login](public/imgs/README/GamePlay__login--production.png)
 2.  Soon after, you will be redirected to a list of games.
-    > ![Image of Games](public/imgs/README/CA-map.png)
 4.  If you choose *__not__* to Sign Up or Log In, at the bottom center, you can click the game controller icon to navigate to the games index.  You can click on any game to play anonymously.
-    > ![Image of Games](public/imgs/README/unregistered-view.png)
+    > ![Image of Games](public/imgs/README/GamePlay__games--production.png)
 5.  You can view other users by clicking the icon of multiple people (2nd from the left) in the NavBar wheel.
+6.  To log out, click the LogOut button on the NavBar wheel.
 
 
 ## F. Deployment workflow
