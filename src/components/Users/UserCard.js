@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft, faBars, faStar, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faBars, faStar, faUser, faUserMinus } from '@fortawesome/free-solid-svg-icons';
 import '../../App.css';
 
 class UserCard extends Component {
@@ -41,6 +41,16 @@ class UserCard extends Component {
                     </div>
                     <div className="mc-description">
                         <h3>Here are the games I've played</h3>
+                        <table>
+                            <thead><tr><th>Game</th><th>W</th><th>L</th><th>D</th></tr></thead>
+                            <tbody>
+                                {this.props.user.games ? this.props.user.games.map((game, index) => (
+                                    <tr key={index}><td>{game.title}</td><td>{game.wins}</td><td>{game.losses}</td><td>{game.draws}</td></tr>
+                                    )
+                                )
+                                : ''}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div className={this.state.iconClass} onClick={this.toggleIconClass}>
@@ -51,6 +61,7 @@ class UserCard extends Component {
                         Be Social
                     </h4>
                     <Link to={`/users/${this.props.user._id}`} ><FontAwesomeIcon icon={faUser} /></Link>
+                    {this.props.loggedUser._id === this.props.user._id ? <Link to={`#`} onClick={() => this.props.deleteUser(this.props.user)}><FontAwesomeIcon icon={faUserMinus} /></Link> : ''}
                 </div>
             </article>
         )
