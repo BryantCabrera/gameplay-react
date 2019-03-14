@@ -13,7 +13,7 @@ class Games extends Component {
                                 <div className="wrapper" key={index}>
                                     <div className={`game-card ${game._id}`}>
                                         <div className={`game-card__image game-card__image--${game._id}`}>
-                                            <img src={game.img} alt="barbarian" />
+                                            <img src={game.img} alt={game.title} title={game.title} />
                                         </div>
                                         <div className={`game-card__level game-card__level--${game._id}`}>{game.author}</div>
                                         <div className="game-card__unit-name">{game.title}</div>
