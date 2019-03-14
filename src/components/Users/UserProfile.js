@@ -47,7 +47,7 @@ class UserProfile extends Component {
     render() {
         return (
             <div className="user-profile">
-                <EditProfile editDisplay={this.state.editDisplay} updateUser={this.props.updateUser} user={this.props.loggedUser} />
+                <EditProfile editDisplay={this.state.editDisplay} toggleEdit={this.toggleEdit} updateUser={this.props.updateUser} user={this.props.loggedUser} />
                 <h1>{this.state.user.username}'s Profile</h1>
 
                 <div className="user-profile__card" id="bright">
