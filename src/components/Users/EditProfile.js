@@ -103,7 +103,7 @@ class EditProfile extends Component {
         return (
             <div className="overlay" style={{ display: `${this.props.editDisplay}` }}>
                 <form className="edit" onSubmit={() => {this.props.updateUser(this.state)}}>
-                    <button className="close-modal" type="button" onClick={this.props.toggleEdit}>X</button>
+                    <button className="close-modal" type="button" onClick={this.props.toggleEdit()}>X</button>
                     {this.state.error ? <div className="error-message">{this.state.error}</div> : ''}
                     <div className="form__field">
                         <input
