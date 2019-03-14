@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-// import Iframe from "react-iframe";
 import IframeComm from "react-iframe-comm";
 import '../../App.css';
 
-class TicTacToe extends Component {
+class SettlersOfCatan extends Component {
     state = {
         attributes: {
-            src: "https://bryant-tic-tac-toe.herokuapp.com/",
+            src: "https://bryantcabrera.github.io/Settlers-of-Catan/",
             width: "100%",
             height: "795",
             frameBorder: 1, // show frame border just for fun...
@@ -53,4 +52,4 @@ class TicTacToe extends Component {
     }
 }
 
-export default withRouter(TicTacToe);
+export default withRouter(SettlersOfCatan);

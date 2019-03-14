@@ -32,7 +32,7 @@ class UserCard extends Component {
                     <span>{this.props.user.username}</span>
                     <strong>
                         <FontAwesomeIcon icon={faStar} />
-                        Valued Member
+                        &nbsp; Valued Gamer
                     </strong>
                 </h2>
                 <div className="mc-content">
