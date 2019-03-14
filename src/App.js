@@ -10,7 +10,8 @@ import Login from './components/Auth/Login';
 import Users from './components/Users/Users';
 import UserProfile from './components/Users/UserProfile';
 import Games from './components/Games/Games';
-import TicTacToe from "./components/Games/TicTacToe";
+import TicTacToe from './components/Games/TicTacToe';
+import SettlersOfCatan from './components/Games/SettlersOfCatan';
 import Chat from './components/Chat/Chat';
 import Footer from './components/Footer/Footer';
 
@@ -75,7 +76,7 @@ class App extends Component {
   toggleLogin = () => {
     // Redirects to homepage
     this.props.history.push(`/`);
-    
+
     const display =
       this.state.loginDisplay === "none" &&
       this.state.registerDisplay === "none"
@@ -306,6 +307,18 @@ class App extends Component {
             path="/games/tictactoe"
             component={() => (
               <TicTacToe
+                history={this.props.history}
+                games={this.state.games}
+                loggedUser={this.state.loggedUser}
+                updateUser={this.updateUser}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/games/catan"
+            component={() => (
+              <SettlersOfCatan
                 history={this.props.history}
                 games={this.state.games}
                 loggedUser={this.state.loggedUser}
