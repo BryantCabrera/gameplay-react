@@ -27,14 +27,14 @@ class Games extends Component {
                                             <div className="stat-value">Time</div>
                                             </div>
 
-                                            <div className="one-third">
-                                            <div className="stat">
-                                                <NavLink exact to={`/games/${game._id}`} onClick={this.props.toggleRegister}>
-                                                    <FontAwesomeIcon className="stat__icon" icon={faPlay} />
-                                                </NavLink>
-                                            </div>
-                                            <div className="stat-value">Play</div>
-                                            </div>
+                                            <NavLink exact to={`/games/${game._id}`} onClick={this.props.toggleRegister}>
+                                                <div className="one-third">
+                                                    <div className="stat">
+                                                        <FontAwesomeIcon className="stat__icon" icon={faPlay} />
+                                                    </div>
+                                                    <div className="stat-value">Play</div>
+                                                </div>
+                                            </NavLink>
 
                                             <div className="one-third no-border">
                                             <div className="stat">150</div>
