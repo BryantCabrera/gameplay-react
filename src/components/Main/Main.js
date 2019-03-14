@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import Games from '../Games/Games';
 import Coverflow from 'react-coverflow';
 import '../../App.css';
 
@@ -22,10 +21,11 @@ class Main extends Component {
                 >
                 {this.props.games.map((game, index) => (
                     <div
-                    onClick={() => this.props.history.push(`/games/${game._id}`)}
-                    onKeyDown={() => console.log('clicking image')}
-                    role="menuitem"
-                    tabIndex="0"
+                        key={index}
+                        onClick={() => this.props.history.push(`/games/${game._id}`)}
+                        onKeyDown={() => console.log('clicking image')}
+                        role="menuitem"
+                        tabIndex="0"
                     >
                         <img
                             src={game.img}
