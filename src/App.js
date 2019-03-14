@@ -234,11 +234,14 @@ class App extends Component {
 
         const parsedResponse = await response.json();
         if (parsedResponse.data === 'User successfully deleted.') {
-          // updates the activityMessage displayed on DOM
+          // Logs user out of the front end and updates the activityMessage displayed on DOM
           this.setState({
             loggedUser: {},
             activityMessage: parsedResponse.data
           });
+
+          // Redirects to homepage
+          this.props.history.push(`/`);
         }
 
       } catch (err) {
@@ -321,6 +324,7 @@ class App extends Component {
               <UserProfile
                 history={this.props.history}
                 loggedUser={this.state.loggedUser}
+                deleteUser={this.deleteUser}
               />
             )}
           />

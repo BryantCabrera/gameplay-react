@@ -38,7 +38,7 @@ class UserProfile extends Component {
                 
                 {this.props.loggedUser._id === this.state.user._id ? <div className="btn" onClick={() => console.log('Editing...')}>Edit Profile</div> : ''}
 
-                {this.props.loggedUser._id === this.state.user._id ? <div className="btn" onClick={() => console.log('Editing...')}>Delete Profile</div> : ''}
+                {this.props.loggedUser._id === this.state.user._id ? <div className="btn" onClick={() => this.props.deleteUser(this.state.user)}>Delete Profile</div> : ''}
 
                 {/* <div class="container">
                     <header>
