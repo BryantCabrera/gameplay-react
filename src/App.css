@@ -1389,6 +1389,9 @@ td{
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg");
 }
 
+.edit {
+  z-index: 2;
+}
 /******************************/
 /********** Footer **********/
 /******************************/

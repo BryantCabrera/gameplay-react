@@ -373,6 +373,7 @@ class App extends Component {
                 loggedUser={this.state.loggedUser}
                 deleteUser={this.deleteUser}
                 games={this.state.games}
+                updateUser={this.updateUser}
               />
             )}
           />
