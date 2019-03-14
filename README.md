@@ -117,9 +117,18 @@ As a user, I want to see other users play stats so I can see who is playing the 
 6.  To log out, click the LogOut button on the NavBar wheel.
 
 
-## F. Deployment workflow
+## F. Development workflow
 1.	React  
+    1. Clone repo from GitHub link
+    2. cd to the project directory in your terminal and $npm install
+    3. If deploying to heroku, make sure to create a .env.production file in your root directory and set a variable REACT_APP_API_URL={enter your back-end's deployed URL here without these curly braces}
 2.	Node/Express
+    1. Clone repo from GitHub link
+    2. cd to the project directory in your terminal and $npm install
+    3. If deploying to heroku, make sure to do the following
+        1. include your deployed front-end's URL in corsOptions in server.js
+        2. In heroku, set your DATABASE_URL variable in configurations equal to your database URL
+            1. My database is hosted on mlab
 
 
 ## G. Next Steps
