@@ -31,10 +31,6 @@ class NavBar extends Component {
     }
 
     handleClick = (e) => {
-        // if (!e) {
-        //     let e = window.event;
-        // }
-        //prevents triggering click event on document
         e.stopPropagation();
 
         if (!this.state.open) {

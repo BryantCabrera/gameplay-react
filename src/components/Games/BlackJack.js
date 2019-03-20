@@ -15,8 +15,6 @@ class BlackJack extends Component {
     }
 
     onReceiveMessage = async (message) => {
-        // console.log("onReceiveMessage");
-        // console.log(message.data, ' This is data from onReceiveMessage in TicTacToe.js');
         if (message.data._id) {
             await this.props.updateUser(message.data);
         } 

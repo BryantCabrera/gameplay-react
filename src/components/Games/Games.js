@@ -9,45 +9,41 @@ class Games extends Component {
         return (
             <div className="games">
                 {this.props.games.map((game, index) => (
-                            // <div className="slide-container">
-                                <div className="wrapper" key={index}>
-                                    <div className={`game-card ${game._id}`}>
-                                        <div className={`game-card__image game-card__image--${game._id}`}>
-                                            <img src={game.img} alt={game.title} title={game.title} />
-                                        </div>
-                                        <div className={`game-card__level game-card__level--${game._id}`}>{game.author}</div>
-                                        <div className="game-card__unit-name">{game.title}</div>
-                                        <div className="game-card__unit-description">
-                                            {game.description}
-                                        </div>
+                    <div className="wrapper" key={index}>
+                        <div className={`game-card ${game._id}`}>
+                            <div className={`game-card__image game-card__image--${game._id}`}>
+                                <img src={game.img} alt={game.title} title={game.title} />
+                            </div>
+                            <div className={`game-card__level game-card__level--${game._id}`}>{game.author}</div>
+                            <div className="game-card__unit-name">{game.title}</div>
+                            <div className="game-card__unit-description">
+                                {game.description}
+                            </div>
 
-                                        <div className={`game-card__unit-stats game-card__unit-stats--${game._id} clearfix`}>
-                                            <div className="one-third">
-                                                <div className="stat">{game.playTime}</div>
-                                                <div className="stat-value">Time</div>
-                                            </div>
+                            <div className={`game-card__unit-stats game-card__unit-stats--${game._id} clearfix`}>
+                                <div className="one-third">
+                                    <div className="stat">{game.playTime}</div>
+                                    <div className="stat-value">Time</div>
+                                </div>
 
-                                            
-                                            <div className="one-third game-card__unit-stats__play">
-                                                <NavLink exact to={`/games/${game._id}`} onClick={this.props.toggleRegister}>
-                                                    <div className="stat">
-                                                        <FontAwesomeIcon className="stat__icon" icon={faPlay} />
-                                                    </div>
-                                                    <div className="stat-value">Play</div>
-                                                </NavLink>
-                                            </div>
-
-                                            <div className="one-third no-border">
-                                            <div className="stat">150</div>
-                                            <div className="stat-value">Plays</div>
-                                            </div>
+                                
+                                <div className="one-third game-card__unit-stats__play">
+                                    <NavLink exact to={`/games/${game._id}`} onClick={this.props.toggleRegister}>
+                                        <div className="stat">
+                                            <FontAwesomeIcon className="stat__icon" icon={faPlay} />
                                         </div>
-                                    </div> 
-                                </div> 
-                            // </div> 
-                        )
-                    )
-                }
+                                        <div className="stat-value">Play</div>
+                                    </NavLink>
+                                </div>
+
+                                <div className="one-third no-border">
+                                <div className="stat">150</div>
+                                <div className="stat-value">Plays</div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                ))}
             </div>
         )
     }

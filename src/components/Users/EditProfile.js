@@ -19,10 +19,6 @@ class EditProfile extends Component {
         error: ''
     }
 
-    // componentDidMount = () => {
-    //     console.log(this.props, ' Register props');
-    // }
-
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
@@ -65,7 +61,7 @@ class EditProfile extends Component {
                 const parsedResponse = await loginResponse.json();
 
                 if (parsedResponse.data === 'Registration successful.') {
-                    //Resets this component's state if a use was successfully logged in
+                    //Resets this component's state if a user was successfully logged in
                     this.setState({
                         username: '',
                         email: '',

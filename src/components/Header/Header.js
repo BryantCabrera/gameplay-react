@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter, NavLink } from 'react-router-dom';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { } from '@fortawesome/free-solid-svg-icons';
-// import logo from '../../static/imgs/logo.svg';
 import '../../App.css';
 
 class Header extends Component {

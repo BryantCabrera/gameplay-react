@@ -9,14 +9,12 @@ class SettlersOfCatan extends Component {
             src: "https://bryantcabrera.github.io/Settlers-of-Catan/",
             width: "100%",
             height: "795",
-            frameBorder: 1, // show frame border just for fun...
+            frameBorder: 1, // shows frame border
         },
         postMessageData: {}
     }
 
     onReceiveMessage = async (message) => {
-        // console.log("onReceiveMessage");
-        // console.log(message.data, ' This is data from onReceiveMessage in TicTacToe.js');
         if (message.data._id) {
             await this.props.updateUser(message.data);
         } 
@@ -32,16 +30,6 @@ class SettlersOfCatan extends Component {
 
     render() {
         return (
-            // <Iframe 
-            //     url="https://bryant-tic-tac-toe.herokuapp.com/"
-            //     width="95%"
-            //     height="80vw"
-            //     id="myId"
-            //     className="myClassname"
-            //     display="initial"
-            //     position="relative"
-            //     allowFullScreen 
-            // />
             <IframeComm
                 attributes={this.state.attributes}
                 postMessageData={this.state.postMessageData}

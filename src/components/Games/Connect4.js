@@ -9,14 +9,12 @@ class Connect4 extends Component {
             src: "https://clay-connect.herokuapp.com/",
             width: "100%",
             height: "795",
-            frameBorder: 1, // show frame border just for fun...
+            frameBorder: 1, // shows frame border
         },
         postMessageData: {}
     }
 
     onReceiveMessage = async (message) => {
-        // console.log("onReceiveMessage");
-        // console.log(message.data, ' This is data from onReceiveMessage in TicTacToe.js');
         if (message.data._id) {
             await this.props.updateUser(message.data);
         } 
