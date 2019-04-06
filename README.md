@@ -69,9 +69,9 @@ As a user, I want to see other users play stats so I can see who is playing the 
     6. react-chat-elements: [https://www.npmjs.com/package/react-chat-elements](https://www.npmjs.com/package/react-chat-elements)
     7. BEM
     8. Google fonts
-    Font Awesome Icons
-    9. flaticon.com
-    10. fetch
+    9. Font Awesome Icons
+    10. flaticon.com
+    11. fetch
 
 > Back-End
 
